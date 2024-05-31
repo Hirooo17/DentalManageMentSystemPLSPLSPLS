@@ -2,7 +2,7 @@
 
 Public Class Patient_history
     Private Sub Guna2GradientPanel2_Paint(sender As Object, e As PaintEventArgs) Handles Guna2GradientPanel2.Paint
-
+        Dim hero As String
     End Sub
 
 

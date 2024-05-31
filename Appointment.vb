@@ -42,6 +42,7 @@ Public Class Appointment
             cmd.Parameters.AddWithValue("@date", datepicker.Value)
             con.Open()
             cmd.ExecuteNonQuery()
+
         End Using
 
         ' Refresh the Appointment Viewer Form
