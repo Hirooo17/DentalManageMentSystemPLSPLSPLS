@@ -56,7 +56,7 @@ Partial Class Appointment
         datepicker.CustomizableEdges = CustomizableEdges3
         datepicker.Font = New Font("Segoe UI", 9F)
         datepicker.Format = DateTimePickerFormat.Long
-        datepicker.Location = New Point(133, 154)
+        datepicker.Location = New Point(122, 172)
         datepicker.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
         datepicker.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
         datepicker.Name = "datepicker"
@@ -83,7 +83,7 @@ Partial Class Appointment
         Guna2Button1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2Button1.Font = New Font("Segoe UI", 9F)
         Guna2Button1.ForeColor = Color.White
-        Guna2Button1.Location = New Point(250, 265)
+        Guna2Button1.Location = New Point(266, 267)
         Guna2Button1.Name = "Guna2Button1"
         Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         Guna2Button1.Size = New Size(225, 56)
@@ -103,7 +103,7 @@ Partial Class Appointment
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1047, 423)
+        ClientSize = New Size(985, 414)
         Controls.Add(nametext)
         Controls.Add(Guna2Button1)
         Controls.Add(Guna2HtmlLabel2)
