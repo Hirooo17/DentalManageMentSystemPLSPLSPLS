@@ -41,6 +41,8 @@ Partial Class PatientDashboard
         Label22 = New Label()
         Label18 = New Label()
         Panel8 = New Panel()
+        Button9 = New Button()
+        Button8 = New Button()
         Label27 = New Label()
         Label26 = New Label()
         Label25 = New Label()
@@ -325,6 +327,8 @@ Partial Class PatientDashboard
         ' Panel8
         ' 
         Panel8.BackColor = Color.LightSkyBlue
+        Panel8.Controls.Add(Button9)
+        Panel8.Controls.Add(Button8)
         Panel8.Controls.Add(Label27)
         Panel8.Controls.Add(Label26)
         Panel8.Controls.Add(Label25)
@@ -337,6 +341,28 @@ Partial Class PatientDashboard
         Panel8.Name = "Panel8"
         Panel8.Size = New Size(711, 500)
         Panel8.TabIndex = 5
+        ' 
+        ' Button9
+        ' 
+        Button9.BackColor = Color.LightBlue
+        Button9.Location = New Point(283, 288)
+        Button9.Margin = New Padding(3, 4, 3, 4)
+        Button9.Name = "Button9"
+        Button9.Size = New Size(133, 43)
+        Button9.TabIndex = 32
+        Button9.Text = "Refresh"
+        Button9.UseVisualStyleBackColor = False
+        ' 
+        ' Button8
+        ' 
+        Button8.BackColor = Color.LightBlue
+        Button8.Location = New Point(283, 218)
+        Button8.Margin = New Padding(3, 4, 3, 4)
+        Button8.Name = "Button8"
+        Button8.Size = New Size(133, 43)
+        Button8.TabIndex = 26
+        Button8.Text = "Home"
+        Button8.UseVisualStyleBackColor = False
         ' 
         ' Label27
         ' 
@@ -801,7 +827,7 @@ Partial Class PatientDashboard
         Label14.AutoSize = True
         Label14.BackColor = Color.Azure
         Label14.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label14.Location = New Point(75, 104)
+        Label14.Location = New Point(75, 180)
         Label14.Name = "Label14"
         Label14.Size = New Size(103, 20)
         Label14.TabIndex = 14
@@ -949,10 +975,12 @@ Partial Class PatientDashboard
         ' PictureBox1
         ' 
         PictureBox1.BackColor = SystemColors.ButtonHighlight
+        PictureBox1.InitialImage = Nothing
         PictureBox1.Location = New Point(65, 72)
         PictureBox1.Margin = New Padding(3, 4, 3, 4)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(117, 104)
+        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
         ' 
@@ -1074,4 +1102,6 @@ Partial Class PatientDashboard
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Button8 As Button
+    Friend WithEvents Button9 As Button
 End Class

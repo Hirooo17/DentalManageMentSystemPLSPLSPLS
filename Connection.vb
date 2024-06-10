@@ -23,4 +23,14 @@ Module Connection
         End Try
     End Sub
 
+    Sub closeCon()
+        Try
+            If con.State = ConnectionState.Open Then
+                con.Close()
+            End If
+        Catch ex As Exception
+            MsgBox("Database disconnection failed: " & ex.Message, MsgBoxStyle.Critical, "Disconnection Error")
+        End Try
+    End Sub
+
 End Module
