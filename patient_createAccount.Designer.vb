@@ -23,16 +23,16 @@ Partial Class patient_createAccount
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(components)
         Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
         Guna2PictureBox3 = New Guna.UI2.WinForms.Guna2PictureBox()
@@ -52,7 +52,7 @@ Partial Class patient_createAccount
         ' Guna2Button2
         ' 
         Guna2Button2.Animated = True
-        Guna2Button2.CustomizableEdges = CustomizableEdges11
+        Guna2Button2.CustomizableEdges = CustomizableEdges1
         Guna2Button2.DisabledState.BorderColor = Color.DarkGray
         Guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button2.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -63,19 +63,19 @@ Partial Class patient_createAccount
         Guna2Button2.Image = My.Resources.Resources.login
         Guna2Button2.Location = New Point(288, 439)
         Guna2Button2.Name = "Guna2Button2"
-        Guna2Button2.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        Guna2Button2.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         Guna2Button2.Size = New Size(262, 56)
         Guna2Button2.TabIndex = 15
         Guna2Button2.Text = "Create Account"
         ' 
         ' Guna2PictureBox3
         ' 
-        Guna2PictureBox3.CustomizableEdges = CustomizableEdges13
+        Guna2PictureBox3.CustomizableEdges = CustomizableEdges3
         Guna2PictureBox3.Image = My.Resources.Resources.password
         Guna2PictureBox3.ImageRotate = 0F
         Guna2PictureBox3.Location = New Point(133, 352)
         Guna2PictureBox3.Name = "Guna2PictureBox3"
-        Guna2PictureBox3.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        Guna2PictureBox3.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         Guna2PictureBox3.Size = New Size(69, 59)
         Guna2PictureBox3.TabIndex = 13
         Guna2PictureBox3.TabStop = False
@@ -86,7 +86,7 @@ Partial Class patient_createAccount
         pword.BorderColor = Color.Black
         pword.BorderRadius = 25
         pword.BorderThickness = 2
-        pword.CustomizableEdges = CustomizableEdges15
+        pword.CustomizableEdges = CustomizableEdges5
         pword.DefaultText = ""
         pword.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         pword.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -103,18 +103,18 @@ Partial Class patient_createAccount
         pword.PlaceholderText = ""
         pword.SelectedText = ""
         pword.ShadowDecoration.BorderRadius = 50
-        pword.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        pword.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         pword.Size = New Size(425, 60)
         pword.TabIndex = 12
         ' 
         ' Guna2PictureBox2
         ' 
-        Guna2PictureBox2.CustomizableEdges = CustomizableEdges17
+        Guna2PictureBox2.CustomizableEdges = CustomizableEdges7
         Guna2PictureBox2.Image = My.Resources.Resources.dentist__1_
         Guna2PictureBox2.ImageRotate = 0F
         Guna2PictureBox2.Location = New Point(133, 249)
         Guna2PictureBox2.Name = "Guna2PictureBox2"
-        Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges18
+        Guna2PictureBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         Guna2PictureBox2.Size = New Size(69, 59)
         Guna2PictureBox2.TabIndex = 11
         Guna2PictureBox2.TabStop = False
@@ -125,7 +125,7 @@ Partial Class patient_createAccount
         patient.BorderColor = Color.Black
         patient.BorderRadius = 25
         patient.BorderThickness = 2
-        patient.CustomizableEdges = CustomizableEdges19
+        patient.CustomizableEdges = CustomizableEdges9
         patient.DefaultText = ""
         patient.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         patient.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -142,7 +142,7 @@ Partial Class patient_createAccount
         patient.PlaceholderText = ""
         patient.SelectedText = ""
         patient.ShadowDecoration.BorderRadius = 50
-        patient.ShadowDecoration.CustomizableEdges = CustomizableEdges20
+        patient.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         patient.Size = New Size(425, 60)
         patient.TabIndex = 10
         ' 
