@@ -37,21 +37,6 @@ Partial Class Dashboard
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim ChartFont1 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
-        Dim ChartFont2 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
-        Dim ChartFont3 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
-        Dim ChartFont4 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
-        Dim Grid1 As Guna.Charts.WinForms.Grid = New Guna.Charts.WinForms.Grid()
-        Dim Tick1 As Guna.Charts.WinForms.Tick = New Guna.Charts.WinForms.Tick()
-        Dim ChartFont5 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
-        Dim Grid2 As Guna.Charts.WinForms.Grid = New Guna.Charts.WinForms.Grid()
-        Dim Tick2 As Guna.Charts.WinForms.Tick = New Guna.Charts.WinForms.Tick()
-        Dim ChartFont6 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
-        Dim Grid3 As Guna.Charts.WinForms.Grid = New Guna.Charts.WinForms.Grid()
-        Dim PointLabel1 As Guna.Charts.WinForms.PointLabel = New Guna.Charts.WinForms.PointLabel()
-        Dim ChartFont7 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
-        Dim Tick3 As Guna.Charts.WinForms.Tick = New Guna.Charts.WinForms.Tick()
-        Dim ChartFont8 As Guna.Charts.WinForms.ChartFont = New Guna.Charts.WinForms.ChartFont()
         Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges29 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -86,7 +71,6 @@ Partial Class Dashboard
         Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Label1 = New Label()
         Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
-        chart1 = New Guna.Charts.WinForms.GunaChart()
         Guna2ComboBox1 = New Guna.UI2.WinForms.Guna2ComboBox()
         Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
@@ -302,7 +286,6 @@ Partial Class Dashboard
         Guna2Panel5.BorderRadius = 16
         Guna2Panel5.BorderStyle = Drawing2D.DashStyle.Dash
         Guna2Panel5.BorderThickness = 2
-        Guna2Panel5.Controls.Add(chart1)
         Guna2Panel5.Controls.Add(Guna2ComboBox1)
         Guna2Panel5.CustomizableEdges = CustomizableEdges11
         Guna2Panel5.FillColor = Color.White
@@ -315,40 +298,6 @@ Partial Class Dashboard
         Guna2Panel5.ShadowDecoration.Shadow = New Padding(7, 0, 0, 7)
         Guna2Panel5.Size = New Size(711, 415)
         Guna2Panel5.TabIndex = 16
-        ' 
-        ' chart1
-        ' 
-        ChartFont1.FontName = "Arial"
-        chart1.Legend.LabelFont = ChartFont1
-        chart1.Location = New Point(79, 92)
-        chart1.Name = "chart1"
-        chart1.Size = New Size(554, 298)
-        chart1.TabIndex = 11
-        ChartFont2.FontName = "Arial"
-        ChartFont2.Size = 12
-        ChartFont2.Style = Guna.Charts.WinForms.ChartFontStyle.Bold
-        chart1.Title.Font = ChartFont2
-        ChartFont3.FontName = "Arial"
-        chart1.Tooltips.BodyFont = ChartFont3
-        ChartFont4.FontName = "Arial"
-        ChartFont4.Size = 9
-        ChartFont4.Style = Guna.Charts.WinForms.ChartFontStyle.Bold
-        chart1.Tooltips.TitleFont = ChartFont4
-        chart1.XAxes.GridLines = Grid1
-        ChartFont5.FontName = "Arial"
-        Tick1.Font = ChartFont5
-        chart1.XAxes.Ticks = Tick1
-        chart1.YAxes.GridLines = Grid2
-        ChartFont6.FontName = "Arial"
-        Tick2.Font = ChartFont6
-        chart1.YAxes.Ticks = Tick2
-        chart1.ZAxes.GridLines = Grid3
-        ChartFont7.FontName = "Arial"
-        PointLabel1.Font = ChartFont7
-        chart1.ZAxes.PointLabels = PointLabel1
-        ChartFont8.FontName = "Arial"
-        Tick3.Font = ChartFont8
-        chart1.ZAxes.Ticks = Tick3
         ' 
         ' Guna2ComboBox1
         ' 
@@ -591,7 +540,6 @@ Partial Class Dashboard
     Friend WithEvents Label1 As Label
     Friend WithEvents Guna2Panel5 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2ComboBox1 As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents chart1 As Guna.Charts.WinForms.GunaChart
     Friend WithEvents Guna2Button6 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents GunaLineDataset1 As Guna.Charts.WinForms.GunaLineDataset
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
