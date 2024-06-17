@@ -92,6 +92,7 @@ Partial Class PatientDashboard
         Label2 = New Label()
         Label1 = New Label()
         PictureBox1 = New PictureBox()
+        Button11 = New Button()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         CType(PictureBox17, ComponentModel.ISupportInitialize).BeginInit()
@@ -322,6 +323,7 @@ Partial Class PatientDashboard
         ' Panel8
         ' 
         Panel8.BackColor = Color.LightSkyBlue
+        Panel8.Controls.Add(Button11)
         Panel8.Controls.Add(Button10)
         Panel8.Controls.Add(Button9)
         Panel8.Controls.Add(Button8)
@@ -933,13 +935,24 @@ Partial Class PatientDashboard
         ' 
         PictureBox1.BackColor = SystemColors.ButtonHighlight
         PictureBox1.InitialImage = Nothing
-        PictureBox1.Location = New Point(65, 72)
+        PictureBox1.Location = New Point(75, 71)
         PictureBox1.Margin = New Padding(3, 4, 3, 4)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(117, 104)
         PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
+        ' 
+        ' Button11
+        ' 
+        Button11.BackColor = Color.LightBlue
+        Button11.Location = New Point(283, 435)
+        Button11.Margin = New Padding(3, 4, 3, 4)
+        Button11.Name = "Button11"
+        Button11.Size = New Size(133, 43)
+        Button11.TabIndex = 33
+        Button11.Text = "create profile"
+        Button11.UseVisualStyleBackColor = False
         ' 
         ' PatientDashboard
         ' 
@@ -1056,4 +1069,5 @@ Partial Class PatientDashboard
     Friend WithEvents Button8 As Button
     Friend WithEvents Button9 As Button
     Friend WithEvents Button10 As Button
+    Friend WithEvents Button11 As Button
 End Class

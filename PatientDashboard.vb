@@ -23,7 +23,7 @@ Public Class PatientDashboard
     End Sub
 
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
-        Me.Dispose()
+        Dispose()
         Form1.Show()
 
     End Sub
@@ -34,6 +34,15 @@ Public Class PatientDashboard
 
 
         createProfile.Show()
+
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        messaging.Show()
+
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
 
     End Sub
 End Class
