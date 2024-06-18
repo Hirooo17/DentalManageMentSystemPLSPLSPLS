@@ -23,8 +23,6 @@ Partial Class profileViewer
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -55,13 +53,13 @@ Partial Class profileViewer
         Dim CustomizableEdges32 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges33 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges34 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(profileViewer))
         Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(components)
         Guna2BorderlessForm2 = New Guna.UI2.WinForms.Guna2BorderlessForm(components)
-        Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
-        Label9 = New Label()
-        Label8 = New Label()
         Label6 = New Label()
         Label3 = New Label()
         Guna2ControlBox2 = New Guna.UI2.WinForms.Guna2ControlBox()
@@ -85,6 +83,11 @@ Partial Class profileViewer
         mi = New Guna.UI2.WinForms.Guna2TextBox()
         Guna2BorderlessForm3 = New Guna.UI2.WinForms.Guna2BorderlessForm(components)
         picbox = New Guna.UI2.WinForms.Guna2PictureBox()
+        Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
+        PrintDialog1 = New PrintDialog()
+        PrintDocument1 = New Printing.PrintDocument()
+        PrintPreviewDialog1 = New PrintPreviewDialog()
+        PrintPreviewControl1 = New PrintPreviewControl()
         CType(picbox, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -99,47 +102,6 @@ Partial Class profileViewer
         Guna2BorderlessForm2.ContainerControl = Me
         Guna2BorderlessForm2.DockIndicatorTransparencyValue = 0.6R
         Guna2BorderlessForm2.TransparentWhileDrag = True
-        ' 
-        ' Guna2Panel1
-        ' 
-        Guna2Panel1.BackColor = Color.Transparent
-        Guna2Panel1.BorderColor = Color.Black
-        Guna2Panel1.BorderRadius = 1
-        Guna2Panel1.BorderStyle = Drawing2D.DashStyle.Custom
-        Guna2Panel1.CustomBorderColor = Color.Black
-        Guna2Panel1.CustomBorderThickness = New Padding(0, 0, 0, 2)
-        CustomizableEdges3.BottomLeft = False
-        CustomizableEdges3.BottomRight = False
-        CustomizableEdges3.TopLeft = False
-        CustomizableEdges3.TopRight = False
-        Guna2Panel1.CustomizableEdges = CustomizableEdges3
-        Guna2Panel1.Location = New Point(47, 486)
-        Guna2Panel1.Margin = New Padding(3, 4, 3, 4)
-        Guna2Panel1.Name = "Guna2Panel1"
-        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        Guna2Panel1.Size = New Size(720, 16)
-        Guna2Panel1.TabIndex = 127
-        Guna2Panel1.UseTransparentBackground = True
-        ' 
-        ' Label9
-        ' 
-        Label9.AutoSize = True
-        Label9.BackColor = Color.Transparent
-        Label9.Location = New Point(549, 530)
-        Label9.Name = "Label9"
-        Label9.Size = New Size(91, 20)
-        Label9.TabIndex = 123
-        Label9.Text = "Relationship"
-        ' 
-        ' Label8
-        ' 
-        Label8.AutoSize = True
-        Label8.BackColor = Color.Transparent
-        Label8.Location = New Point(30, 529)
-        Label8.Name = "Label8"
-        Label8.Size = New Size(137, 20)
-        Label8.TabIndex = 121
-        Label8.Text = "Emergency Contact"
         ' 
         ' Label6
         ' 
@@ -168,7 +130,7 @@ Partial Class profileViewer
         Guna2ControlBox2.CustomizableEdges = CustomizableEdges5
         Guna2ControlBox2.FillColor = Color.FromArgb(CByte(139), CByte(152), CByte(166))
         Guna2ControlBox2.IconColor = Color.White
-        Guna2ControlBox2.Location = New Point(856, 22)
+        Guna2ControlBox2.Location = New Point(1116, 22)
         Guna2ControlBox2.Margin = New Padding(3, 4, 3, 4)
         Guna2ControlBox2.Name = "Guna2ControlBox2"
         Guna2ControlBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges6
@@ -192,7 +154,7 @@ Partial Class profileViewer
         Guna2ControlBox1.CustomizableEdges = CustomizableEdges7
         Guna2ControlBox1.FillColor = Color.FromArgb(CByte(139), CByte(152), CByte(166))
         Guna2ControlBox1.IconColor = Color.White
-        Guna2ControlBox1.Location = New Point(903, 22)
+        Guna2ControlBox1.Location = New Point(1163, 22)
         Guna2ControlBox1.Margin = New Padding(3, 4, 3, 4)
         Guna2ControlBox1.Name = "Guna2ControlBox1"
         Guna2ControlBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges8
@@ -287,6 +249,7 @@ Partial Class profileViewer
         fname.Name = "fname"
         fname.PasswordChar = ChrW(0)
         fname.PlaceholderText = "First Name"
+        fname.ReadOnly = True
         fname.SelectedText = ""
         fname.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         fname.Size = New Size(254, 43)
@@ -329,6 +292,7 @@ Partial Class profileViewer
         lname.Name = "lname"
         lname.PasswordChar = ChrW(0)
         lname.PlaceholderText = "Last Name"
+        lname.ReadOnly = True
         lname.SelectedText = ""
         lname.ShadowDecoration.CustomizableEdges = CustomizableEdges18
         lname.Size = New Size(254, 43)
@@ -497,6 +461,7 @@ Partial Class profileViewer
         mi.Name = "mi"
         mi.PasswordChar = ChrW(0)
         mi.PlaceholderText = "Middle Initial"
+        mi.ReadOnly = True
         mi.SelectedText = ""
         mi.ShadowDecoration.CustomizableEdges = CustomizableEdges34
         mi.Size = New Size(254, 43)
@@ -510,24 +475,63 @@ Partial Class profileViewer
         ' 
         ' picbox
         ' 
-        picbox.CustomizableEdges = CustomizableEdges1
+        picbox.CustomizableEdges = CustomizableEdges3
         picbox.ImageRotate = 0F
         picbox.Location = New Point(140, 2)
         picbox.Name = "picbox"
-        picbox.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        picbox.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         picbox.Size = New Size(115, 94)
         picbox.TabIndex = 129
         picbox.TabStop = False
+        ' 
+        ' Guna2Button1
+        ' 
+        Guna2Button1.CustomizableEdges = CustomizableEdges1
+        Guna2Button1.DisabledState.BorderColor = Color.DarkGray
+        Guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray
+        Guna2Button1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        Guna2Button1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        Guna2Button1.Font = New Font("Segoe UI", 9F)
+        Guna2Button1.ForeColor = Color.White
+        Guna2Button1.Location = New Point(276, 497)
+        Guna2Button1.Name = "Guna2Button1"
+        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        Guna2Button1.Size = New Size(258, 51)
+        Guna2Button1.TabIndex = 130
+        Guna2Button1.Text = "print"
+        ' 
+        ' PrintDialog1
+        ' 
+        PrintDialog1.UseEXDialog = True
+        ' 
+        ' PrintDocument1
+        ' 
+        ' 
+        ' PrintPreviewDialog1
+        ' 
+        PrintPreviewDialog1.AutoScrollMargin = New Size(0, 0)
+        PrintPreviewDialog1.AutoScrollMinSize = New Size(0, 0)
+        PrintPreviewDialog1.ClientSize = New Size(400, 300)
+        PrintPreviewDialog1.Enabled = True
+        PrintPreviewDialog1.Icon = CType(resources.GetObject("PrintPreviewDialog1.Icon"), Icon)
+        PrintPreviewDialog1.Name = "PrintPreviewDialog1"
+        PrintPreviewDialog1.Visible = False
+        ' 
+        ' PrintPreviewControl1
+        ' 
+        PrintPreviewControl1.Location = New Point(854, 94)
+        PrintPreviewControl1.Name = "PrintPreviewControl1"
+        PrintPreviewControl1.Size = New Size(317, 406)
+        PrintPreviewControl1.TabIndex = 131
         ' 
         ' profileViewer
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(950, 807)
+        ClientSize = New Size(1210, 807)
+        Controls.Add(PrintPreviewControl1)
+        Controls.Add(Guna2Button1)
         Controls.Add(picbox)
-        Controls.Add(Guna2Panel1)
-        Controls.Add(Label9)
-        Controls.Add(Label8)
         Controls.Add(Label6)
         Controls.Add(Label3)
         Controls.Add(Guna2ControlBox2)
@@ -558,9 +562,6 @@ Partial Class profileViewer
     End Sub
 
     Friend WithEvents Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm
-    Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label8 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Guna2ControlBox2 As Guna.UI2.WinForms.Guna2ControlBox
@@ -585,4 +586,9 @@ Partial Class profileViewer
     Friend WithEvents Guna2BorderlessForm2 As Guna.UI2.WinForms.Guna2BorderlessForm
     Friend WithEvents Guna2BorderlessForm3 As Guna.UI2.WinForms.Guna2BorderlessForm
     Friend WithEvents picbox As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents PrintDialog1 As PrintDialog
+    Friend WithEvents PrintDocument1 As Printing.PrintDocument
+    Friend WithEvents PrintPreviewDialog1 As PrintPreviewDialog
+    Friend WithEvents PrintPreviewControl1 As PrintPreviewControl
 End Class
