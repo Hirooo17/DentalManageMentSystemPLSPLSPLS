@@ -55,34 +55,14 @@ Partial Class profileViewer
         Dim CustomizableEdges32 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges33 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges34 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges35 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges36 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges37 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges38 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges39 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges40 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges41 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges42 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges43 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges44 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges45 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges46 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges47 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges48 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(components)
         Guna2BorderlessForm2 = New Guna.UI2.WinForms.Guna2BorderlessForm(components)
-        Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Label9 = New Label()
-        Guna2TextBox16 = New Guna.UI2.WinForms.Guna2TextBox()
         Label8 = New Label()
-        Guna2TextBox15 = New Guna.UI2.WinForms.Guna2TextBox()
-        Guna2ComboBox2 = New Guna.UI2.WinForms.Guna2ComboBox()
         Label6 = New Label()
-        emergLname = New Guna.UI2.WinForms.Guna2TextBox()
-        emergFirstname = New Guna.UI2.WinForms.Guna2TextBox()
         Label3 = New Label()
         Guna2ControlBox2 = New Guna.UI2.WinForms.Guna2ControlBox()
         Label1 = New Label()
@@ -92,7 +72,6 @@ Partial Class profileViewer
         Label4 = New Label()
         block = New Guna.UI2.WinForms.Guna2TextBox()
         Label5 = New Label()
-        dtpAge = New Guna.UI2.WinForms.Guna2DateTimePicker()
         fname = New Guna.UI2.WinForms.Guna2TextBox()
         zip = New Guna.UI2.WinForms.Guna2TextBox()
         lname = New Guna.UI2.WinForms.Guna2TextBox()
@@ -105,8 +84,8 @@ Partial Class profileViewer
         gender = New Guna.UI2.WinForms.Guna2ComboBox()
         mi = New Guna.UI2.WinForms.Guna2TextBox()
         Guna2BorderlessForm3 = New Guna.UI2.WinForms.Guna2BorderlessForm(components)
-        Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
-        CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        picbox = New Guna.UI2.WinForms.Guna2PictureBox()
+        CType(picbox, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' Guna2BorderlessForm1
@@ -121,25 +100,6 @@ Partial Class profileViewer
         Guna2BorderlessForm2.DockIndicatorTransparencyValue = 0.6R
         Guna2BorderlessForm2.TransparentWhileDrag = True
         ' 
-        ' Guna2Button1
-        ' 
-        Guna2Button1.CustomizableEdges = CustomizableEdges3
-        Guna2Button1.DisabledState.BorderColor = Color.DarkGray
-        Guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2Button1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2Button1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        Guna2Button1.FillColor = Color.LightCoral
-        Guna2Button1.Font = New Font("Segoe UI", 9F)
-        Guna2Button1.ForeColor = Color.White
-        Guna2Button1.HoverState.FillColor = Color.Silver
-        Guna2Button1.Location = New Point(689, 729)
-        Guna2Button1.Margin = New Padding(3, 4, 3, 4)
-        Guna2Button1.Name = "Guna2Button1"
-        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        Guna2Button1.Size = New Size(113, 47)
-        Guna2Button1.TabIndex = 128
-        Guna2Button1.Text = "Next"
-        ' 
         ' Guna2Panel1
         ' 
         Guna2Panel1.BackColor = Color.Transparent
@@ -148,15 +108,15 @@ Partial Class profileViewer
         Guna2Panel1.BorderStyle = Drawing2D.DashStyle.Custom
         Guna2Panel1.CustomBorderColor = Color.Black
         Guna2Panel1.CustomBorderThickness = New Padding(0, 0, 0, 2)
-        CustomizableEdges5.BottomLeft = False
-        CustomizableEdges5.BottomRight = False
-        CustomizableEdges5.TopLeft = False
-        CustomizableEdges5.TopRight = False
-        Guna2Panel1.CustomizableEdges = CustomizableEdges5
+        CustomizableEdges3.BottomLeft = False
+        CustomizableEdges3.BottomRight = False
+        CustomizableEdges3.TopLeft = False
+        CustomizableEdges3.TopRight = False
+        Guna2Panel1.CustomizableEdges = CustomizableEdges3
         Guna2Panel1.Location = New Point(47, 486)
         Guna2Panel1.Margin = New Padding(3, 4, 3, 4)
         Guna2Panel1.Name = "Guna2Panel1"
-        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         Guna2Panel1.Size = New Size(720, 16)
         Guna2Panel1.TabIndex = 127
         Guna2Panel1.UseTransparentBackground = True
@@ -171,27 +131,6 @@ Partial Class profileViewer
         Label9.TabIndex = 123
         Label9.Text = "Relationship"
         ' 
-        ' Guna2TextBox16
-        ' 
-        Guna2TextBox16.CustomizableEdges = CustomizableEdges7
-        Guna2TextBox16.DefaultText = ""
-        Guna2TextBox16.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        Guna2TextBox16.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        Guna2TextBox16.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox16.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox16.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox16.Font = New Font("Segoe UI", 9F)
-        Guna2TextBox16.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox16.Location = New Point(549, 656)
-        Guna2TextBox16.Margin = New Padding(3, 5, 3, 5)
-        Guna2TextBox16.Name = "Guna2TextBox16"
-        Guna2TextBox16.PasswordChar = ChrW(0)
-        Guna2TextBox16.PlaceholderText = "Contact No."
-        Guna2TextBox16.SelectedText = ""
-        Guna2TextBox16.ShadowDecoration.CustomizableEdges = CustomizableEdges8
-        Guna2TextBox16.Size = New Size(254, 43)
-        Guna2TextBox16.TabIndex = 126
-        ' 
         ' Label8
         ' 
         Label8.AutoSize = True
@@ -202,46 +141,6 @@ Partial Class profileViewer
         Label8.TabIndex = 121
         Label8.Text = "Emergency Contact"
         ' 
-        ' Guna2TextBox15
-        ' 
-        Guna2TextBox15.CustomizableEdges = CustomizableEdges9
-        Guna2TextBox15.DefaultText = ""
-        Guna2TextBox15.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        Guna2TextBox15.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        Guna2TextBox15.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox15.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox15.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox15.Font = New Font("Segoe UI", 9F)
-        Guna2TextBox15.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox15.Location = New Point(31, 656)
-        Guna2TextBox15.Margin = New Padding(3, 5, 3, 5)
-        Guna2TextBox15.Name = "Guna2TextBox15"
-        Guna2TextBox15.PasswordChar = ChrW(0)
-        Guna2TextBox15.PlaceholderText = "Email Address"
-        Guna2TextBox15.SelectedText = ""
-        Guna2TextBox15.ShadowDecoration.CustomizableEdges = CustomizableEdges10
-        Guna2TextBox15.Size = New Size(514, 43)
-        Guna2TextBox15.TabIndex = 125
-        ' 
-        ' Guna2ComboBox2
-        ' 
-        Guna2ComboBox2.BackColor = Color.Transparent
-        Guna2ComboBox2.CustomizableEdges = CustomizableEdges11
-        Guna2ComboBox2.DrawMode = DrawMode.OwnerDrawFixed
-        Guna2ComboBox2.DropDownStyle = ComboBoxStyle.DropDownList
-        Guna2ComboBox2.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2ComboBox2.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2ComboBox2.Font = New Font("Segoe UI", 10F)
-        Guna2ComboBox2.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
-        Guna2ComboBox2.ItemHeight = 25
-        Guna2ComboBox2.Items.AddRange(New Object() {"Spouse", "Husband"})
-        Guna2ComboBox2.Location = New Point(549, 554)
-        Guna2ComboBox2.Margin = New Padding(3, 4, 3, 4)
-        Guna2ComboBox2.Name = "Guna2ComboBox2"
-        Guna2ComboBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges12
-        Guna2ComboBox2.Size = New Size(253, 31)
-        Guna2ComboBox2.TabIndex = 124
-        ' 
         ' Label6
         ' 
         Label6.AutoSize = True
@@ -251,48 +150,6 @@ Partial Class profileViewer
         Label6.Size = New Size(62, 20)
         Label6.TabIndex = 111
         Label6.Text = "Address"
-        ' 
-        ' emergLname
-        ' 
-        emergLname.CustomizableEdges = CustomizableEdges13
-        emergLname.DefaultText = ""
-        emergLname.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        emergLname.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        emergLname.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        emergLname.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        emergLname.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        emergLname.Font = New Font("Segoe UI", 9F)
-        emergLname.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        emergLname.Location = New Point(290, 553)
-        emergLname.Margin = New Padding(3, 5, 3, 5)
-        emergLname.Name = "emergLname"
-        emergLname.PasswordChar = ChrW(0)
-        emergLname.PlaceholderText = "Last Name"
-        emergLname.SelectedText = ""
-        emergLname.ShadowDecoration.CustomizableEdges = CustomizableEdges14
-        emergLname.Size = New Size(254, 43)
-        emergLname.TabIndex = 122
-        ' 
-        ' emergFirstname
-        ' 
-        emergFirstname.CustomizableEdges = CustomizableEdges15
-        emergFirstname.DefaultText = ""
-        emergFirstname.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        emergFirstname.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        emergFirstname.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        emergFirstname.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        emergFirstname.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        emergFirstname.Font = New Font("Segoe UI", 9F)
-        emergFirstname.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        emergFirstname.Location = New Point(29, 553)
-        emergFirstname.Margin = New Padding(3, 5, 3, 5)
-        emergFirstname.Name = "emergFirstname"
-        emergFirstname.PasswordChar = ChrW(0)
-        emergFirstname.PlaceholderText = "First Name"
-        emergFirstname.SelectedText = ""
-        emergFirstname.ShadowDecoration.CustomizableEdges = CustomizableEdges16
-        emergFirstname.Size = New Size(254, 43)
-        emergFirstname.TabIndex = 120
         ' 
         ' Label3
         ' 
@@ -308,13 +165,13 @@ Partial Class profileViewer
         ' 
         Guna2ControlBox2.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         Guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox
-        Guna2ControlBox2.CustomizableEdges = CustomizableEdges17
+        Guna2ControlBox2.CustomizableEdges = CustomizableEdges5
         Guna2ControlBox2.FillColor = Color.FromArgb(CByte(139), CByte(152), CByte(166))
         Guna2ControlBox2.IconColor = Color.White
         Guna2ControlBox2.Location = New Point(856, 22)
         Guna2ControlBox2.Margin = New Padding(3, 4, 3, 4)
         Guna2ControlBox2.Name = "Guna2ControlBox2"
-        Guna2ControlBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges18
+        Guna2ControlBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2ControlBox2.Size = New Size(40, 39)
         Guna2ControlBox2.TabIndex = 119
         ' 
@@ -325,20 +182,20 @@ Partial Class profileViewer
         Label1.Font = New Font("Consolas", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(347, 22)
         Label1.Name = "Label1"
-        Label1.Size = New Size(127, 36)
+        Label1.Size = New Size(239, 36)
         Label1.TabIndex = 98
-        Label1.Text = "Profile"
+        Label1.Text = "Profile viewer"
         ' 
         ' Guna2ControlBox1
         ' 
         Guna2ControlBox1.Anchor = AnchorStyles.Top Or AnchorStyles.Right
-        Guna2ControlBox1.CustomizableEdges = CustomizableEdges19
+        Guna2ControlBox1.CustomizableEdges = CustomizableEdges7
         Guna2ControlBox1.FillColor = Color.FromArgb(CByte(139), CByte(152), CByte(166))
         Guna2ControlBox1.IconColor = Color.White
         Guna2ControlBox1.Location = New Point(903, 22)
         Guna2ControlBox1.Margin = New Padding(3, 4, 3, 4)
         Guna2ControlBox1.Name = "Guna2ControlBox1"
-        Guna2ControlBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges20
+        Guna2ControlBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         Guna2ControlBox1.Size = New Size(40, 39)
         Guna2ControlBox1.TabIndex = 118
         ' 
@@ -354,7 +211,7 @@ Partial Class profileViewer
         ' 
         ' brgy
         ' 
-        brgy.CustomizableEdges = CustomizableEdges21
+        brgy.CustomizableEdges = CustomizableEdges9
         brgy.DefaultText = ""
         brgy.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         brgy.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -369,7 +226,7 @@ Partial Class profileViewer
         brgy.PasswordChar = ChrW(0)
         brgy.PlaceholderText = "Brgy"
         brgy.SelectedText = ""
-        brgy.ShadowDecoration.CustomizableEdges = CustomizableEdges22
+        brgy.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         brgy.Size = New Size(256, 43)
         brgy.TabIndex = 117
         ' 
@@ -385,7 +242,7 @@ Partial Class profileViewer
         ' 
         ' block
         ' 
-        block.CustomizableEdges = CustomizableEdges23
+        block.CustomizableEdges = CustomizableEdges11
         block.DefaultText = ""
         block.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         block.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -400,7 +257,7 @@ Partial Class profileViewer
         block.PasswordChar = ChrW(0)
         block.PlaceholderText = "Blk, Lot, Unit"
         block.SelectedText = ""
-        block.ShadowDecoration.CustomizableEdges = CustomizableEdges24
+        block.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         block.Size = New Size(253, 43)
         block.TabIndex = 116
         ' 
@@ -414,28 +271,9 @@ Partial Class profileViewer
         Label5.TabIndex = 108
         Label5.Text = "Gender"
         ' 
-        ' dtpAge
-        ' 
-        dtpAge.Checked = True
-        dtpAge.CustomFormat = "MM/dd/yyyy"
-        dtpAge.CustomizableEdges = CustomizableEdges25
-        dtpAge.FillColor = Color.White
-        dtpAge.FocusedColor = Color.FromArgb(CByte(192), CByte(192), CByte(255))
-        dtpAge.Font = New Font("Segoe UI", 9F)
-        dtpAge.Format = DateTimePickerFormat.Custom
-        dtpAge.Location = New Point(290, 180)
-        dtpAge.Margin = New Padding(3, 4, 3, 4)
-        dtpAge.MaxDate = New Date(9998, 12, 31, 0, 0, 0, 0)
-        dtpAge.MinDate = New Date(1753, 1, 1, 0, 0, 0, 0)
-        dtpAge.Name = "dtpAge"
-        dtpAge.ShadowDecoration.CustomizableEdges = CustomizableEdges26
-        dtpAge.Size = New Size(254, 43)
-        dtpAge.TabIndex = 115
-        dtpAge.Value = New Date(2024, 5, 25, 17, 27, 23, 233)
-        ' 
         ' fname
         ' 
-        fname.CustomizableEdges = CustomizableEdges27
+        fname.CustomizableEdges = CustomizableEdges13
         fname.DefaultText = ""
         fname.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         fname.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -450,13 +288,13 @@ Partial Class profileViewer
         fname.PasswordChar = ChrW(0)
         fname.PlaceholderText = "First Name"
         fname.SelectedText = ""
-        fname.ShadowDecoration.CustomizableEdges = CustomizableEdges28
+        fname.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         fname.Size = New Size(254, 43)
         fname.TabIndex = 99
         ' 
         ' zip
         ' 
-        zip.CustomizableEdges = CustomizableEdges29
+        zip.CustomizableEdges = CustomizableEdges15
         zip.DefaultText = ""
         zip.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         zip.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -471,13 +309,13 @@ Partial Class profileViewer
         zip.PasswordChar = ChrW(0)
         zip.PlaceholderText = "Zip Code"
         zip.SelectedText = ""
-        zip.ShadowDecoration.CustomizableEdges = CustomizableEdges30
+        zip.ShadowDecoration.CustomizableEdges = CustomizableEdges16
         zip.Size = New Size(255, 43)
         zip.TabIndex = 114
         ' 
         ' lname
         ' 
-        lname.CustomizableEdges = CustomizableEdges31
+        lname.CustomizableEdges = CustomizableEdges17
         lname.DefaultText = ""
         lname.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         lname.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -492,13 +330,13 @@ Partial Class profileViewer
         lname.PasswordChar = ChrW(0)
         lname.PlaceholderText = "Last Name"
         lname.SelectedText = ""
-        lname.ShadowDecoration.CustomizableEdges = CustomizableEdges32
+        lname.ShadowDecoration.CustomizableEdges = CustomizableEdges18
         lname.Size = New Size(254, 43)
         lname.TabIndex = 100
         ' 
         ' region
         ' 
-        region.CustomizableEdges = CustomizableEdges33
+        region.CustomizableEdges = CustomizableEdges19
         region.DefaultText = ""
         region.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         region.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -513,13 +351,13 @@ Partial Class profileViewer
         region.PasswordChar = ChrW(0)
         region.PlaceholderText = "Region"
         region.SelectedText = ""
-        region.ShadowDecoration.CustomizableEdges = CustomizableEdges34
+        region.ShadowDecoration.CustomizableEdges = CustomizableEdges20
         region.Size = New Size(254, 43)
         region.TabIndex = 113
         ' 
         ' email
         ' 
-        email.CustomizableEdges = CustomizableEdges35
+        email.CustomizableEdges = CustomizableEdges21
         email.DefaultText = ""
         email.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         email.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -534,13 +372,13 @@ Partial Class profileViewer
         email.PasswordChar = ChrW(0)
         email.PlaceholderText = "Email Address"
         email.SelectedText = ""
-        email.ShadowDecoration.CustomizableEdges = CustomizableEdges36
+        email.ShadowDecoration.CustomizableEdges = CustomizableEdges22
         email.Size = New Size(514, 43)
         email.TabIndex = 102
         ' 
         ' city
         ' 
-        city.CustomizableEdges = CustomizableEdges37
+        city.CustomizableEdges = CustomizableEdges23
         city.DefaultText = ""
         city.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         city.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -555,13 +393,13 @@ Partial Class profileViewer
         city.PasswordChar = ChrW(0)
         city.PlaceholderText = "City"
         city.SelectedText = ""
-        city.ShadowDecoration.CustomizableEdges = CustomizableEdges38
+        city.ShadowDecoration.CustomizableEdges = CustomizableEdges24
         city.Size = New Size(253, 43)
         city.TabIndex = 112
         ' 
         ' age
         ' 
-        age.CustomizableEdges = CustomizableEdges39
+        age.CustomizableEdges = CustomizableEdges25
         age.DefaultText = ""
         age.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         age.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -578,13 +416,13 @@ Partial Class profileViewer
         age.PlaceholderText = ""
         age.ReadOnly = True
         age.SelectedText = ""
-        age.ShadowDecoration.CustomizableEdges = CustomizableEdges40
+        age.ShadowDecoration.CustomizableEdges = CustomizableEdges26
         age.Size = New Size(254, 43)
         age.TabIndex = 104
         ' 
         ' street
         ' 
-        street.CustomizableEdges = CustomizableEdges41
+        street.CustomizableEdges = CustomizableEdges27
         street.DefaultText = ""
         street.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         street.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -599,13 +437,13 @@ Partial Class profileViewer
         street.PasswordChar = ChrW(0)
         street.PlaceholderText = "Street Address"
         street.SelectedText = ""
-        street.ShadowDecoration.CustomizableEdges = CustomizableEdges42
+        street.ShadowDecoration.CustomizableEdges = CustomizableEdges28
         street.Size = New Size(256, 43)
         street.TabIndex = 110
         ' 
         ' contact
         ' 
-        contact.CustomizableEdges = CustomizableEdges43
+        contact.CustomizableEdges = CustomizableEdges29
         contact.DefaultText = ""
         contact.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         contact.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -620,14 +458,14 @@ Partial Class profileViewer
         contact.PasswordChar = ChrW(0)
         contact.PlaceholderText = "Contact No."
         contact.SelectedText = ""
-        contact.ShadowDecoration.CustomizableEdges = CustomizableEdges44
+        contact.ShadowDecoration.CustomizableEdges = CustomizableEdges30
         contact.Size = New Size(254, 43)
         contact.TabIndex = 106
         ' 
         ' gender
         ' 
         gender.BackColor = Color.Transparent
-        gender.CustomizableEdges = CustomizableEdges45
+        gender.CustomizableEdges = CustomizableEdges31
         gender.DrawMode = DrawMode.OwnerDrawFixed
         gender.DropDownStyle = ComboBoxStyle.DropDownList
         gender.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
@@ -639,13 +477,13 @@ Partial Class profileViewer
         gender.Location = New Point(549, 181)
         gender.Margin = New Padding(3, 4, 3, 4)
         gender.Name = "gender"
-        gender.ShadowDecoration.CustomizableEdges = CustomizableEdges46
+        gender.ShadowDecoration.CustomizableEdges = CustomizableEdges32
         gender.Size = New Size(253, 31)
         gender.TabIndex = 109
         ' 
         ' mi
         ' 
-        mi.CustomizableEdges = CustomizableEdges47
+        mi.CustomizableEdges = CustomizableEdges33
         mi.DefaultText = ""
         mi.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         mi.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -660,7 +498,7 @@ Partial Class profileViewer
         mi.PasswordChar = ChrW(0)
         mi.PlaceholderText = "Middle Initial"
         mi.SelectedText = ""
-        mi.ShadowDecoration.CustomizableEdges = CustomizableEdges48
+        mi.ShadowDecoration.CustomizableEdges = CustomizableEdges34
         mi.Size = New Size(254, 43)
         mi.TabIndex = 107
         ' 
@@ -670,33 +508,27 @@ Partial Class profileViewer
         Guna2BorderlessForm3.DockIndicatorTransparencyValue = 0.6R
         Guna2BorderlessForm3.TransparentWhileDrag = True
         ' 
-        ' Guna2PictureBox1
+        ' picbox
         ' 
-        Guna2PictureBox1.CustomizableEdges = CustomizableEdges1
-        Guna2PictureBox1.ImageRotate = 0F
-        Guna2PictureBox1.Location = New Point(140, 2)
-        Guna2PictureBox1.Name = "Guna2PictureBox1"
-        Guna2PictureBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        Guna2PictureBox1.Size = New Size(115, 94)
-        Guna2PictureBox1.TabIndex = 129
-        Guna2PictureBox1.TabStop = False
+        picbox.CustomizableEdges = CustomizableEdges1
+        picbox.ImageRotate = 0F
+        picbox.Location = New Point(140, 2)
+        picbox.Name = "picbox"
+        picbox.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        picbox.Size = New Size(115, 94)
+        picbox.TabIndex = 129
+        picbox.TabStop = False
         ' 
         ' profileViewer
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(950, 807)
-        Controls.Add(Guna2PictureBox1)
-        Controls.Add(Guna2Button1)
+        Controls.Add(picbox)
         Controls.Add(Guna2Panel1)
         Controls.Add(Label9)
-        Controls.Add(Guna2TextBox16)
         Controls.Add(Label8)
-        Controls.Add(Guna2TextBox15)
-        Controls.Add(Guna2ComboBox2)
         Controls.Add(Label6)
-        Controls.Add(emergLname)
-        Controls.Add(emergFirstname)
         Controls.Add(Label3)
         Controls.Add(Guna2ControlBox2)
         Controls.Add(Label1)
@@ -706,7 +538,6 @@ Partial Class profileViewer
         Controls.Add(Label4)
         Controls.Add(block)
         Controls.Add(Label5)
-        Controls.Add(dtpAge)
         Controls.Add(fname)
         Controls.Add(zip)
         Controls.Add(lname)
@@ -721,22 +552,16 @@ Partial Class profileViewer
         FormBorderStyle = FormBorderStyle.None
         Name = "profileViewer"
         Text = "profileViewer"
-        CType(Guna2PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(picbox, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
     Friend WithEvents Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm
-    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Label9 As Label
-    Friend WithEvents Guna2TextBox16 As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents Guna2TextBox15 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2ComboBox2 As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents emergLname As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents emergFirstname As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Guna2ControlBox2 As Guna.UI2.WinForms.Guna2ControlBox
     Friend WithEvents Label1 As Label
@@ -746,7 +571,6 @@ Partial Class profileViewer
     Friend WithEvents Label4 As Label
     Friend WithEvents block As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents dtpAge As Guna.UI2.WinForms.Guna2DateTimePicker
     Friend WithEvents fname As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents zip As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents lname As Guna.UI2.WinForms.Guna2TextBox
@@ -760,5 +584,5 @@ Partial Class profileViewer
     Friend WithEvents mi As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents Guna2BorderlessForm2 As Guna.UI2.WinForms.Guna2BorderlessForm
     Friend WithEvents Guna2BorderlessForm3 As Guna.UI2.WinForms.Guna2BorderlessForm
-    Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
+    Friend WithEvents picbox As Guna.UI2.WinForms.Guna2PictureBox
 End Class

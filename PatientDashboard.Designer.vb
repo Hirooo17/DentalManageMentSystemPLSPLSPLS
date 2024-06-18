@@ -41,6 +41,8 @@ Partial Class PatientDashboard
         Label22 = New Label()
         Label18 = New Label()
         Panel8 = New Panel()
+        Button12 = New Button()
+        Button11 = New Button()
         Button10 = New Button()
         Button9 = New Button()
         Button8 = New Button()
@@ -92,7 +94,6 @@ Partial Class PatientDashboard
         Label2 = New Label()
         Label1 = New Label()
         PictureBox1 = New PictureBox()
-        Button11 = New Button()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         CType(PictureBox17, ComponentModel.ISupportInitialize).BeginInit()
@@ -323,6 +324,7 @@ Partial Class PatientDashboard
         ' Panel8
         ' 
         Panel8.BackColor = Color.LightSkyBlue
+        Panel8.Controls.Add(Button12)
         Panel8.Controls.Add(Button11)
         Panel8.Controls.Add(Button10)
         Panel8.Controls.Add(Button9)
@@ -339,6 +341,28 @@ Partial Class PatientDashboard
         Panel8.Name = "Panel8"
         Panel8.Size = New Size(711, 500)
         Panel8.TabIndex = 5
+        ' 
+        ' Button12
+        ' 
+        Button12.BackColor = Color.LightBlue
+        Button12.Location = New Point(449, 435)
+        Button12.Margin = New Padding(3, 4, 3, 4)
+        Button12.Name = "Button12"
+        Button12.Size = New Size(133, 43)
+        Button12.TabIndex = 34
+        Button12.Text = "view profile"
+        Button12.UseVisualStyleBackColor = False
+        ' 
+        ' Button11
+        ' 
+        Button11.BackColor = Color.LightBlue
+        Button11.Location = New Point(283, 435)
+        Button11.Margin = New Padding(3, 4, 3, 4)
+        Button11.Name = "Button11"
+        Button11.Size = New Size(133, 43)
+        Button11.TabIndex = 33
+        Button11.Text = "create profile"
+        Button11.UseVisualStyleBackColor = False
         ' 
         ' Button10
         ' 
@@ -943,17 +967,6 @@ Partial Class PatientDashboard
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
         ' 
-        ' Button11
-        ' 
-        Button11.BackColor = Color.LightBlue
-        Button11.Location = New Point(283, 435)
-        Button11.Margin = New Padding(3, 4, 3, 4)
-        Button11.Name = "Button11"
-        Button11.Size = New Size(133, 43)
-        Button11.TabIndex = 33
-        Button11.Text = "create profile"
-        Button11.UseVisualStyleBackColor = False
-        ' 
         ' PatientDashboard
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -1070,4 +1083,5 @@ Partial Class PatientDashboard
     Friend WithEvents Button9 As Button
     Friend WithEvents Button10 As Button
     Friend WithEvents Button11 As Button
+    Friend WithEvents Button12 As Button
 End Class

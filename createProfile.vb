@@ -6,7 +6,7 @@ Imports Mysqlx.Session
 Public Class createProfile
     Private Sub Guna2Button2_Click(sender As Object, e As EventArgs) Handles Guna2Button2.Click
 
-        If fname.Text = "" And mi.Text = "" And lname.Text = "" And mi.Text = "" And age.Text = "" And gender.Text = "" And contact.Text = "" And block.Text = "" And street.Text = "" And brgy.Text = "" And city.Text = "" And region.Text = "" And zip.Text = "" Then
+        If fname.Text = "" Or mi.Text = "" Or lname.Text = "" Or mi.Text = "" Or age.Text = "" Or gender.Text = "" Or contact.Text = "" Or block.Text = "" Or street.Text = "" Or brgy.Text = "" Or city.Text = "" Or region.Text = "" Or zip.Text = "" Then
 
             MsgBox("You must first fill all the important information before using this")
 

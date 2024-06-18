@@ -1,4 +1,5 @@
 ﻿Imports System.IO
+Imports MySql.Data.MySqlClient
 
 Public Class PatientDashboard
 
@@ -10,9 +11,7 @@ Public Class PatientDashboard
 
     End Sub
 
-    Private Sub PatientDashboard_Load(sender As Object, e As EventArgs) Handles Me.Load
 
-    End Sub
 
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
         If SharedData.SharedImage IsNot Nothing Then
@@ -29,7 +28,7 @@ Public Class PatientDashboard
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-
+        ' creation of profile
 
 
 
@@ -37,12 +36,61 @@ Public Class PatientDashboard
 
     End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        messaging.Show()
 
+
+
+
+    Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
+        Dim userID As Integer = PatientLogForm.LoggedInUserID ' Get the logged-in patient's ID
+        Dim userInfo As Dictionary(Of String, Object) = GetUserProfile(userID)
+
+        If userInfo.Count > 0 Then
+            Dim profileViewer As New profileViewer()
+            profileViewer.ShowUserProfile(userInfo)
+            profileViewer.Show()
+            Hide()
+        Else
+            MsgBox("Profile not found for the user ID: " & userID, MsgBoxStyle.Information, "Profile Not Found")
+        End If
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+    Public Function GetUserProfile(userID As Integer) As Dictionary(Of String, Object)
+        Dim userInfo As New Dictionary(Of String, Object)
+
+        Try
+            openCon()
+            Dim query As String = "SELECT * FROM patients_profile WHERE ID = @userID"
+            cmd = New MySqlCommand(query, con)
+            cmd.Parameters.AddWithValue("@userID", userID)
+
+            Dim reader As MySqlDataReader = cmd.ExecuteReader()
+            If reader.Read() Then
+                userInfo("firstname") = reader("firstname").ToString()
+                userInfo("middlename") = reader("middlename").ToString()
+                userInfo("lastname") = reader("lastname").ToString()
+                userInfo("age") = reader("age").ToString()
+                userInfo("gender") = reader("gender").ToString()
+                userInfo("contact") = reader("contact").ToString()
+                userInfo("block") = reader("block").ToString()
+                userInfo("street") = reader("street").ToString()
+                userInfo("brgy") = reader("brgy").ToString()
+                userInfo("city") = reader("city").ToString()
+                userInfo("region") = reader("region").ToString()
+                userInfo("zipcode") = reader("zipcode").ToString()
+                userInfo("image") = If(reader("image") Is DBNull.Value, Nothing, CType(reader("image"), Byte()))
+            End If
+            reader.Close()
+        Catch ex As Exception
+            MsgBox("Error retrieving profile: " & ex.Message, MsgBoxStyle.Critical, "Profile Error")
+        Finally
+            closeCon()
+        End Try
+
+        Return userInfo
+    End Function
+
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        createProfile.Show()
 
     End Sub
 End Class

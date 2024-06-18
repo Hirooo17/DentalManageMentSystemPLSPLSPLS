@@ -2,6 +2,9 @@
 
 Public Class PatientLogForm
 
+
+    Public Shared LoggedInUserID As Integer
+
     Public Sub New()
         ' This call is required by the designer.
         InitializeComponent()
@@ -16,38 +19,41 @@ Public Class PatientLogForm
         Dim password As String = pWord.Text
 
         ' Verify the credentials
-        If VerifyCredentials(username, password) Then
+        Dim userID As Integer = VerifyCredentials(username, password)
+        If userID <> -1 Then
             MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            LoggedInUserID = userID ' Store the logged-in user ID
             Me.Hide()
             PatientDashboard.Show()
-
         Else
             MessageBox.Show("Invalid username or password. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
 
-    Private Function VerifyCredentials(username As String, password As String) As Boolean
+    Private Function VerifyCredentials(username As String, password As String) As Integer
         Try
             ' Open the connection
             openCon()
 
             ' Prepare the SQL command to check the credentials
-            Dim query As String = "SELECT COUNT(*) FROM patient_account WHERE username = @username AND password = @password"
+            Dim query As String = "SELECT ID FROM patient_account WHERE username = @username AND password = @password"
             Using cmd As New MySqlCommand(query, con)
                 ' Add the parameters to the SQL command
                 cmd.Parameters.AddWithValue("@username", username)
                 cmd.Parameters.AddWithValue("@password", password)
 
-                ' Execute the command and get the count of matching records
-                Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
-
-                ' If the count is 1, the credentials are valid
-                Return count = 1
+                ' Execute the command and get the user ID if the credentials are valid
+                Dim result As Object = cmd.ExecuteScalar()
+                If result IsNot Nothing Then
+                    Return Convert.ToInt32(result)
+                Else
+                    Return -1
+                End If
             End Using
         Catch ex As Exception
             ' Show an error message
             MessageBox.Show("An error occurred while verifying the credentials: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            Return False
+            Return -1
         Finally
             ' Close the connection
             closeCon()
