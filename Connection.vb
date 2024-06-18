@@ -33,4 +33,34 @@ Module Connection
         End Try
     End Sub
 
+
+
+
+    Public Function UserProfileExists(userID As Integer) As Boolean
+        Try
+            ' Open the connection
+            openCon()
+
+            ' Prepare the SQL command to check if the user profile exists
+            Dim query As String = "SELECT COUNT(*) FROM patients_profile WHERE ID = @userID"
+            Using cmd As New MySqlCommand(query, con)
+                ' Add the parameter to the SQL command
+                cmd.Parameters.AddWithValue("@userID", userID)
+
+                ' Execute the command and get the count of matching records
+                Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+
+                ' If the count is 1 or more, the profile exists
+                Return count > 0
+            End Using
+        Catch ex As Exception
+            ' Show an error message
+            MessageBox.Show("An error occurred while checking the profile existence: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
+        Finally
+            ' Close the connection
+            closeCon()
+        End Try
+    End Function
+
 End Module

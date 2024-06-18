@@ -563,16 +563,14 @@ Partial Class createProfile
         age.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
         age.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
         age.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        age.Enabled = False
         age.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         age.Font = New Font("Segoe UI", 9F)
         age.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        age.Location = New Point(10, 168)
+        age.Location = New Point(10, 173)
         age.Margin = New Padding(3, 5, 3, 5)
         age.Name = "age"
         age.PasswordChar = ChrW(0)
         age.PlaceholderText = ""
-        age.ReadOnly = True
         age.SelectedText = ""
         age.ShadowDecoration.CustomizableEdges = CustomizableEdges41
         age.Size = New Size(254, 43)

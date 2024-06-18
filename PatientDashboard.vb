@@ -5,6 +5,8 @@ Public Class PatientDashboard
 
 
 
+
+
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
         Profile.Show()
         Hide()
@@ -48,7 +50,7 @@ Public Class PatientDashboard
             Dim profileViewer As New profileViewer()
             profileViewer.ShowUserProfile(userInfo)
             profileViewer.Show()
-            Hide()
+
         Else
             MsgBox("Profile not found for the user ID: " & userID, MsgBoxStyle.Information, "Profile Not Found")
         End If
@@ -90,7 +92,30 @@ Public Class PatientDashboard
     End Function
 
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
-        createProfile.Show()
+        Dim userID As Integer = PatientLogForm.LoggedInUserID ' Get the logged-in user's ID
 
+        If UserProfileExists(userID) Then
+            MessageBox.Show("You have already filled out your profile information.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Else
+            ' Show the profile creation form
+            Dim createProfileForm As New createProfile()
+            createProfile.Show()
+        End If
+
+    End Sub
+
+    Private Sub PatientDashboard_Load(sender As Object, e As EventArgs) Handles Me.Load
+        ' Display the logged-in user's name
+        Label1.Text = PatientLogForm.LoggedInUserName
+
+        ' Display the logged-in user's image
+        If PatientLogForm.LoggedInUserImage IsNot Nothing Then
+            Dim imageData As Byte() = PatientLogForm.LoggedInUserImage
+            Using ms As New MemoryStream(imageData)
+                PictureBox1.Image = Image.FromStream(ms)
+            End Using
+        Else
+            PictureBox1.Image = Nothing
+        End If
     End Sub
 End Class

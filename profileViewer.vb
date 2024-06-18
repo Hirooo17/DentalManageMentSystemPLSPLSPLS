@@ -34,4 +34,8 @@ Public Class profileViewer
     Private Sub profileViewer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub Guna2ControlBox2_Click(sender As Object, e As EventArgs) Handles Guna2ControlBox2.Click
+        Me.Dispose()
+    End Sub
 End Class

@@ -4,6 +4,8 @@ Public Class PatientLogForm
 
 
     Public Shared LoggedInUserID As Integer
+    Public Shared LoggedInUserImage As Byte()
+    Public Shared LoggedInUserName As String
 
     Public Sub New()
         ' This call is required by the designer.
@@ -23,6 +25,8 @@ Public Class PatientLogForm
         If userID <> -1 Then
             MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
             LoggedInUserID = userID ' Store the logged-in user ID
+            LoggedInUserImage = GetUserImage(userID) ' Store the logged-in user image
+            LoggedInUserName = GetUserName(userID) ' Store the logged-in user name
             Me.Hide()
             PatientDashboard.Show()
         Else
@@ -54,6 +58,92 @@ Public Class PatientLogForm
             ' Show an error message
             MessageBox.Show("An error occurred while verifying the credentials: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return -1
+        Finally
+            ' Close the connection
+            closeCon()
+        End Try
+    End Function
+
+    Private Function GetUserImage(userID As Integer) As Byte()
+        Try
+            ' Open the connection
+            openCon()
+
+            ' Prepare the SQL command to retrieve the user image
+            Dim query As String = "SELECT image FROM patients_profile WHERE ID = @userID"
+            Using cmd As New MySqlCommand(query, con)
+                ' Add the parameter to the SQL command
+                cmd.Parameters.AddWithValue("@userID", userID)
+
+                ' Execute the command and get the user image
+                Dim result As Object = cmd.ExecuteScalar()
+                If result IsNot Nothing AndAlso Not IsDBNull(result) Then
+                    Return CType(result, Byte())
+                Else
+                    Return Nothing
+                End If
+            End Using
+        Catch ex As Exception
+            ' Show an error message
+            MessageBox.Show("An error occurred while retrieving the user image: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return Nothing
+        Finally
+            ' Close the connection
+            closeCon()
+        End Try
+    End Function
+
+    Private Function GetUserName(userID As Integer) As String
+        Try
+            ' Open the connection
+            openCon()
+
+            ' Prepare the SQL command to retrieve the user's full name
+            Dim query As String = "SELECT CONCAT(firstname, ' ', middlename, ' ', lastname) AS fullname FROM patients_profile WHERE ID = @userID"
+            Using cmd As New MySqlCommand(query, con)
+                ' Add the parameter to the SQL command
+                cmd.Parameters.AddWithValue("@userID", userID)
+
+                ' Execute the command and get the user's full name
+                Dim result As Object = cmd.ExecuteScalar()
+                If result IsNot Nothing AndAlso Not IsDBNull(result) Then
+                    Return result.ToString()
+                Else
+                    Return String.Empty
+                End If
+            End Using
+        Catch ex As Exception
+            ' Show an error message
+            MessageBox.Show("An error occurred while retrieving the user name: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return String.Empty
+        Finally
+            ' Close the connection
+            closeCon()
+        End Try
+    End Function
+
+
+    Public Function UserProfileExists(userID As Integer) As Boolean
+        Try
+            ' Open the connection
+            openCon()
+
+            ' Prepare the SQL command to check if the user profile exists
+            Dim query As String = "SELECT COUNT(*) FROM patients_profile WHERE ID = @userID"
+            Using cmd As New MySqlCommand(query, con)
+                ' Add the parameter to the SQL command
+                cmd.Parameters.AddWithValue("@userID", userID)
+
+                ' Execute the command and get the count of matching records
+                Dim count As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+
+                ' If the count is 1 or more, the profile exists
+                Return count > 0
+            End Using
+        Catch ex As Exception
+            ' Show an error message
+            MessageBox.Show("An error occurred while checking the profile existence: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return False
         Finally
             ' Close the connection
             closeCon()
