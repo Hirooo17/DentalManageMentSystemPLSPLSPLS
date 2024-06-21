@@ -43,11 +43,11 @@ Partial Class Reservation
         Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Reservation))
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2AnimateWindow1 = New Guna.UI2.WinForms.Guna2AnimateWindow(components)
         Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(components)
         WelcomeLbl = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -72,9 +72,9 @@ Partial Class Reservation
         Guna2HtmlLabel8 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         age = New Guna.UI2.WinForms.Guna2ComboBox()
         Guna2GradientPanel1 = New Guna.UI2.WinForms.Guna2GradientPanel()
+        Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
         Guna2GradientButton1 = New Guna.UI2.WinForms.Guna2GradientButton()
         Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(components)
-        Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
         Guna2GradientPanel1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -479,8 +479,24 @@ Partial Class Reservation
         Guna2GradientPanel1.Location = New Point(0, 0)
         Guna2GradientPanel1.Name = "Guna2GradientPanel1"
         Guna2GradientPanel1.ShadowDecoration.CustomizableEdges = CustomizableEdges24
-        Guna2GradientPanel1.Size = New Size(942, 711)
+        Guna2GradientPanel1.Size = New Size(936, 1015)
         Guna2GradientPanel1.TabIndex = 25
+        ' 
+        ' Guna2Button2
+        ' 
+        Guna2Button2.CustomizableEdges = CustomizableEdges1
+        Guna2Button2.DisabledState.BorderColor = Color.DarkGray
+        Guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray
+        Guna2Button2.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        Guna2Button2.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        Guna2Button2.Font = New Font("Segoe UI", 22.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2Button2.ForeColor = Color.White
+        Guna2Button2.Location = New Point(257, 600)
+        Guna2Button2.Name = "Guna2Button2"
+        Guna2Button2.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        Guna2Button2.Size = New Size(387, 75)
+        Guna2Button2.TabIndex = 26
+        Guna2Button2.Text = "Create account?"
         ' 
         ' Guna2GradientButton1
         ' 
@@ -516,27 +532,11 @@ Partial Class Reservation
         Guna2DragControl1.TargetControl = Guna2GradientPanel1
         Guna2DragControl1.UseTransparentDrag = True
         ' 
-        ' Guna2Button2
-        ' 
-        Guna2Button2.CustomizableEdges = CustomizableEdges1
-        Guna2Button2.DisabledState.BorderColor = Color.DarkGray
-        Guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2Button2.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2Button2.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        Guna2Button2.Font = New Font("Segoe UI", 22.2F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Guna2Button2.ForeColor = Color.White
-        Guna2Button2.Location = New Point(257, 600)
-        Guna2Button2.Name = "Guna2Button2"
-        Guna2Button2.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        Guna2Button2.Size = New Size(387, 75)
-        Guna2Button2.TabIndex = 26
-        Guna2Button2.Text = "Create account?"
-        ' 
         ' Reservation
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(942, 711)
+        ClientSize = New Size(936, 1015)
         Controls.Add(Guna2GradientPanel1)
         FormBorderStyle = FormBorderStyle.None
         Icon = CType(resources.GetObject("$this.Icon"), Icon)

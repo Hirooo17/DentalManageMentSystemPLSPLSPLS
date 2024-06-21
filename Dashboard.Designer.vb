@@ -353,8 +353,9 @@ Partial Class Dashboard
         Guna2Button7.Font = New Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Guna2Button7.ForeColor = Color.Black
         Guna2Button7.Image = My.Resources.Resources.booking
+        Guna2Button7.ImageOffset = New Point(-20, 0)
         Guna2Button7.ImageSize = New Size(60, 60)
-        Guna2Button7.Location = New Point(1, 542)
+        Guna2Button7.Location = New Point(-22, 517)
         Guna2Button7.Name = "Guna2Button7"
         Guna2Button7.ShadowDecoration.CustomizableEdges = CustomizableEdges16
         Guna2Button7.Size = New Size(259, 58)
@@ -375,7 +376,7 @@ Partial Class Dashboard
         Guna2Button1.ForeColor = Color.Black
         Guna2Button1.Image = My.Resources.Resources.booking
         Guna2Button1.ImageSize = New Size(60, 60)
-        Guna2Button1.Location = New Point(1, 478)
+        Guna2Button1.Location = New Point(-8, 453)
         Guna2Button1.Name = "Guna2Button1"
         Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges18
         Guna2Button1.Size = New Size(259, 58)
@@ -436,7 +437,7 @@ Partial Class Dashboard
         Guna2Button4.Image = My.Resources.Resources.profile
         Guna2Button4.ImageOffset = New Point(-15, 0)
         Guna2Button4.ImageSize = New Size(60, 60)
-        Guna2Button4.Location = New Point(3, 416)
+        Guna2Button4.Location = New Point(1, 389)
         Guna2Button4.Name = "Guna2Button4"
         Guna2Button4.ShadowDecoration.CustomizableEdges = CustomizableEdges24
         Guna2Button4.Size = New Size(250, 58)
@@ -458,7 +459,7 @@ Partial Class Dashboard
         Guna2Button3.Image = CType(resources.GetObject("Guna2Button3.Image"), Image)
         Guna2Button3.ImageOffset = New Point(-15, 0)
         Guna2Button3.ImageSize = New Size(60, 60)
-        Guna2Button3.Location = New Point(3, 352)
+        Guna2Button3.Location = New Point(3, 672)
         Guna2Button3.Name = "Guna2Button3"
         Guna2Button3.ShadowDecoration.CustomizableEdges = CustomizableEdges26
         Guna2Button3.Size = New Size(250, 58)
@@ -479,7 +480,7 @@ Partial Class Dashboard
         Guna2Button2.ForeColor = Color.Black
         Guna2Button2.Image = My.Resources.Resources.patient__2_
         Guna2Button2.ImageSize = New Size(60, 60)
-        Guna2Button2.Location = New Point(-5, 288)
+        Guna2Button2.Location = New Point(0, 307)
         Guna2Button2.Name = "Guna2Button2"
         Guna2Button2.ShadowDecoration.CustomizableEdges = CustomizableEdges28
         Guna2Button2.Size = New Size(258, 58)
@@ -496,7 +497,7 @@ Partial Class Dashboard
         reserv.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
         reserv.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         reserv.FillColor = Color.Transparent
-        reserv.Font = New Font("Nirmala UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        reserv.Font = New Font("Nirmala UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         reserv.ForeColor = Color.Black
         reserv.Image = My.Resources.Resources.booking
         reserv.ImageSize = New Size(60, 60)
@@ -505,7 +506,7 @@ Partial Class Dashboard
         reserv.ShadowDecoration.CustomizableEdges = CustomizableEdges30
         reserv.Size = New Size(258, 58)
         reserv.TabIndex = 4
-        reserv.Text = "RESERVATION"
+        reserv.Text = "Walk-in Reservations"
         ' 
         ' Guna2ShadowForm1
         ' 
