@@ -86,4 +86,8 @@ Public Class verification
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
         checkVerificationCode()
     End Sub
+
+    Private Sub verification_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

@@ -112,7 +112,7 @@ Public Class Dashboard
     End Sub
 
     Private Sub Guna2Button4_Click(sender As Object, e As EventArgs) Handles Guna2Button4.Click
-        switchPanel(Profile)
+        switchPanel(current_profile)
     End Sub
 
     Private Sub Guna2Button5_Click(sender As Object, e As EventArgs) Handles Guna2Button5.Click
@@ -134,6 +134,10 @@ Public Class Dashboard
     Private Sub Guna2Button1_Click_2(sender As Object, e As EventArgs) Handles Guna2Button1.Click
 
         switchPanel(AppointmentViewerForm)
-        appointmentViewerForm.RefreshDataGrid()
+        appointmentViewerForm.RefreshDataGrid
+    End Sub
+
+    Private Sub Guna2Button7_Click(sender As Object, e As EventArgs) Handles Guna2Button7.Click
+        switchPanel(procedure)
     End Sub
 End Class

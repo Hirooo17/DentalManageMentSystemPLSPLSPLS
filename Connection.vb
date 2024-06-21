@@ -7,6 +7,7 @@ Module Connection
     Public datatbl As New DataTable
 
 
+
     Sub openCon()
         Try
             If con.ConnectionString = "" Then

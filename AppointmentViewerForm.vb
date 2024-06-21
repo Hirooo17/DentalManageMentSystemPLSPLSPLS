@@ -37,7 +37,7 @@ Public Class AppointmentViewerForm
 
                         ' Load the data from the data reader into the DataTable
                         dataTable.Load(reader)
-                        MessageBox.Show("Data loaded into DataTable successfully. Row count: " & dataTable.Rows.Count)
+                        '  MessageBox.Show("Data loaded into DataTable successfully. Row count: " & dataTable.Rows.Count)
 
                         ' Rename the columns
                         dataTable.Columns("fullname").ColumnName = "Name"
