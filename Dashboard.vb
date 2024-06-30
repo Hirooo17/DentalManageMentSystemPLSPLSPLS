@@ -1,4 +1,5 @@
 ﻿Imports Guna.Charts.WinForms
+Imports MySql.Data.MySqlClient
 Imports System
 Imports System.Drawing
 Imports System.Windows.Forms
@@ -23,17 +24,72 @@ Public Class Dashboard
     Private patientForm As New Patient
 
 
-    Private Sub Guna2Button2_Click(sender As Object, e As EventArgs)
 
-
-
-
-
-    End Sub
 
     Private Sub Dashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        displayReservation()
+        displayWalkIns()
+        displayTotalP()
+    End Sub
+
+    Private Sub displayReservation()
+        Try
+            ' Open the connection
+            openCon()
+
+            ' Create the SQL query to count records
+            Dim query As String = "SELECT COUNT(*) FROM appointment"
+            Dim command As New MySqlCommand(query, con)
+
+            ' Execute the query and get the count
+            Dim count As Integer = Convert.ToInt32(command.ExecuteScalar())
+
+            ' Display the count in the label
+            lblReservation.Text = count.ToString()
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        Finally
+            ' Close the connection
+            closeCon()
+        End Try
+
 
     End Sub
+
+
+    Private Sub displayWalkIns()
+        Try
+            ' Open the connection
+            openCon()
+
+            ' Create the SQL query to count records
+            Dim query As String = "SELECT COUNT(*) FROM patients"
+            Dim command As New MySqlCommand(query, con)
+
+            ' Execute the query and get the count
+            Dim count As Integer = Convert.ToInt32(command.ExecuteScalar())
+
+            ' Display the count in the label
+            lblWalkIns.Text = count.ToString()
+        Catch ex As Exception
+            MessageBox.Show("Error: " & ex.Message)
+        Finally
+            ' Close the connection
+            closeCon()
+        End Try
+    End Sub
+
+    Private Sub displayTotalP()
+        Dim reserv As Integer = Integer.Parse(lblReservation.Text)
+        Dim walkin As Integer = Integer.Parse(lblWalkIns.Text)
+
+        Dim overall As Integer = reserv + walkin
+
+        totalP.Text = overall.ToString()
+
+
+    End Sub
+
 
     Private Sub Guna2ImageButton1_Click(sender As Object, e As EventArgs)
         Dim patientFormInstance = Patient.GetInstance
@@ -140,4 +196,6 @@ Public Class Dashboard
     Private Sub Guna2Button7_Click(sender As Object, e As EventArgs) Handles Guna2Button7.Click
         switchPanel(procedure)
     End Sub
+
+
 End Class

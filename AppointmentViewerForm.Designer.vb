@@ -26,8 +26,23 @@ Partial Class AppointmentViewerForm
         Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(components)
         dataGridA = New Guna.UI2.WinForms.Guna2DataGridView()
+        cbStatus = New Guna.UI2.WinForms.Guna2ComboBox()
+        Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
+        cBId = New Guna.UI2.WinForms.Guna2ComboBox()
+        Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
+        patientTxt = New Guna.UI2.WinForms.Guna2HtmlLabel()
         CType(dataGridA, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -51,7 +66,8 @@ Partial Class AppointmentViewerForm
         DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
         DataGridViewCellStyle2.WrapMode = DataGridViewTriState.True
         dataGridA.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
-        dataGridA.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dataGridA.ColumnHeadersHeight = 22
+        dataGridA.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle3.BackColor = Color.White
         DataGridViewCellStyle3.Font = New Font("Segoe UI", 9F)
@@ -61,12 +77,12 @@ Partial Class AppointmentViewerForm
         DataGridViewCellStyle3.WrapMode = DataGridViewTriState.False
         dataGridA.DefaultCellStyle = DataGridViewCellStyle3
         dataGridA.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
-        dataGridA.Location = New Point(144, 60)
+        dataGridA.Location = New Point(51, 51)
         dataGridA.Name = "dataGridA"
         dataGridA.ReadOnly = True
         dataGridA.RowHeadersVisible = False
         dataGridA.RowHeadersWidth = 51
-        dataGridA.Size = New Size(661, 458)
+        dataGridA.Size = New Size(807, 458)
         dataGridA.TabIndex = 0
         dataGridA.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
         dataGridA.ThemeStyle.AlternatingRowsStyle.Font = Nothing
@@ -79,7 +95,7 @@ Partial Class AppointmentViewerForm
         dataGridA.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None
         dataGridA.ThemeStyle.HeaderStyle.Font = New Font("Segoe UI", 9F)
         dataGridA.ThemeStyle.HeaderStyle.ForeColor = Color.White
-        dataGridA.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dataGridA.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
         dataGridA.ThemeStyle.HeaderStyle.Height = 22
         dataGridA.ThemeStyle.ReadOnly = True
         dataGridA.ThemeStyle.RowsStyle.BackColor = Color.White
@@ -90,18 +106,129 @@ Partial Class AppointmentViewerForm
         dataGridA.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
         dataGridA.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
         ' 
+        ' cbStatus
+        ' 
+        cbStatus.BackColor = Color.Transparent
+        cbStatus.CustomizableEdges = CustomizableEdges7
+        cbStatus.DrawMode = DrawMode.OwnerDrawFixed
+        cbStatus.DropDownStyle = ComboBoxStyle.DropDownList
+        cbStatus.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        cbStatus.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        cbStatus.Font = New Font("Segoe UI", 10F)
+        cbStatus.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
+        cbStatus.ItemHeight = 30
+        cbStatus.Items.AddRange(New Object() {"Cancelled", "Coming Back", "Completed", "No Show"})
+        cbStatus.Location = New Point(51, 661)
+        cbStatus.Name = "cbStatus"
+        cbStatus.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        cbStatus.Size = New Size(297, 36)
+        cbStatus.TabIndex = 1
+        ' 
+        ' Guna2HtmlLabel1
+        ' 
+        Guna2HtmlLabel1.BackColor = Color.Transparent
+        Guna2HtmlLabel1.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2HtmlLabel1.Location = New Point(51, 541)
+        Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
+        Guna2HtmlLabel1.Size = New Size(146, 33)
+        Guna2HtmlLabel1.TabIndex = 2
+        Guna2HtmlLabel1.Text = "Edit Status for"
+        ' 
+        ' Guna2Button1
+        ' 
+        Guna2Button1.CustomizableEdges = CustomizableEdges5
+        Guna2Button1.DisabledState.BorderColor = Color.DarkGray
+        Guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray
+        Guna2Button1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        Guna2Button1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        Guna2Button1.Font = New Font("Segoe UI", 9F)
+        Guna2Button1.ForeColor = Color.White
+        Guna2Button1.Location = New Point(51, 718)
+        Guna2Button1.Name = "Guna2Button1"
+        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        Guna2Button1.Size = New Size(225, 56)
+        Guna2Button1.TabIndex = 4
+        Guna2Button1.Text = "Confirm"
+        ' 
+        ' cBId
+        ' 
+        cBId.BackColor = Color.Transparent
+        cBId.CustomizableEdges = CustomizableEdges3
+        cBId.DrawMode = DrawMode.OwnerDrawFixed
+        cBId.DropDownStyle = ComboBoxStyle.DropDownList
+        cBId.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        cBId.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        cBId.Font = New Font("Segoe UI", 10F)
+        cBId.ForeColor = Color.FromArgb(CByte(68), CByte(88), CByte(112))
+        cBId.ItemHeight = 30
+        cBId.Location = New Point(51, 580)
+        cBId.Name = "cBId"
+        cBId.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        cBId.Size = New Size(297, 36)
+        cBId.TabIndex = 5
+        ' 
+        ' Guna2HtmlLabel2
+        ' 
+        Guna2HtmlLabel2.BackColor = Color.Transparent
+        Guna2HtmlLabel2.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Guna2HtmlLabel2.Location = New Point(51, 622)
+        Guna2HtmlLabel2.Name = "Guna2HtmlLabel2"
+        Guna2HtmlLabel2.Size = New Size(133, 33)
+        Guna2HtmlLabel2.TabIndex = 6
+        Guna2HtmlLabel2.Text = "Select Status"
+        ' 
+        ' Guna2Button2
+        ' 
+        Guna2Button2.CustomizableEdges = CustomizableEdges1
+        Guna2Button2.DisabledState.BorderColor = Color.DarkGray
+        Guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray
+        Guna2Button2.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        Guna2Button2.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        Guna2Button2.Font = New Font("Segoe UI", 9F)
+        Guna2Button2.ForeColor = Color.White
+        Guna2Button2.Location = New Point(303, 718)
+        Guna2Button2.Name = "Guna2Button2"
+        Guna2Button2.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        Guna2Button2.Size = New Size(225, 56)
+        Guna2Button2.TabIndex = 7
+        Guna2Button2.Text = "Confirm"
+        ' 
+        ' patientTxt
+        ' 
+        patientTxt.BackColor = Color.Transparent
+        patientTxt.Font = New Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        patientTxt.Location = New Point(203, 541)
+        patientTxt.Name = "patientTxt"
+        patientTxt.Size = New Size(3, 2)
+        patientTxt.TabIndex = 8
+        ' 
         ' AppointmentViewerForm
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(936, 1015)
+        Controls.Add(patientTxt)
+        Controls.Add(Guna2Button2)
+        Controls.Add(Guna2HtmlLabel2)
+        Controls.Add(cBId)
+        Controls.Add(Guna2Button1)
+        Controls.Add(Guna2HtmlLabel1)
+        Controls.Add(cbStatus)
         Controls.Add(dataGridA)
         FormBorderStyle = FormBorderStyle.None
         Name = "AppointmentViewerForm"
         Text = "AppointmentViewerForm"
         CType(dataGridA, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
+        PerformLayout()
     End Sub
     Friend WithEvents Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm
     Friend WithEvents dataGridA As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents cbStatus As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents cBId As Guna.UI2.WinForms.Guna2ComboBox
+    Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
+    Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents patientTxt As Guna.UI2.WinForms.Guna2HtmlLabel
 End Class

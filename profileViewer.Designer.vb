@@ -87,7 +87,6 @@ Partial Class profileViewer
         PrintDialog1 = New PrintDialog()
         PrintDocument1 = New Printing.PrintDocument()
         PrintPreviewDialog1 = New PrintPreviewDialog()
-        PrintPreviewControl1 = New PrintPreviewControl()
         CType(picbox, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
@@ -517,19 +516,11 @@ Partial Class profileViewer
         PrintPreviewDialog1.Name = "PrintPreviewDialog1"
         PrintPreviewDialog1.Visible = False
         ' 
-        ' PrintPreviewControl1
-        ' 
-        PrintPreviewControl1.Location = New Point(854, 94)
-        PrintPreviewControl1.Name = "PrintPreviewControl1"
-        PrintPreviewControl1.Size = New Size(317, 406)
-        PrintPreviewControl1.TabIndex = 131
-        ' 
         ' profileViewer
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1210, 807)
-        Controls.Add(PrintPreviewControl1)
         Controls.Add(Guna2Button1)
         Controls.Add(picbox)
         Controls.Add(Label6)
@@ -590,5 +581,4 @@ Partial Class profileViewer
     Friend WithEvents PrintDialog1 As PrintDialog
     Friend WithEvents PrintDocument1 As Printing.PrintDocument
     Friend WithEvents PrintPreviewDialog1 As PrintPreviewDialog
-    Friend WithEvents PrintPreviewControl1 As PrintPreviewControl
 End Class

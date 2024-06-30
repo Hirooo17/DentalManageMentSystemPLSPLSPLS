@@ -38,14 +38,7 @@ Public Class profileViewer
     End Sub
 
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
-        ' Set the PrintDocument for the PrintPreviewControl
-        PrintPreviewControl1.Document = PrintDocument1
 
-        ' Use a standard print controller which does not show a status dialog
-        PrintDocument1.PrintController = New StandardPrintController()
-
-        ' Refresh the preview control to display the document
-        PrintPreviewControl1.Refresh()
     End Sub
 
     Private Sub printDocument1_PrintPage(sender As Object, e As PrintPageEventArgs) Handles PrintDocument1.PrintPage

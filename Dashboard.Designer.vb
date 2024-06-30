@@ -62,14 +62,15 @@ Partial Class Dashboard
         dashPanel = New Guna.UI2.WinForms.Guna2GradientPanel()
         switchypanel = New Guna.UI2.WinForms.Guna2Panel()
         Guna2Panel4 = New Guna.UI2.WinForms.Guna2Panel()
-        Label5 = New Label()
+        totalP = New Label()
+        Label4 = New Label()
         Label6 = New Label()
         Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
-        Label3 = New Label()
-        Label4 = New Label()
+        Label2 = New Label()
+        lblWalkIns = New Label()
         Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
-        Label2 = New Label()
+        lblReservation = New Label()
         Guna2PictureBox1 = New Guna.UI2.WinForms.Guna2PictureBox()
         Label1 = New Label()
         Guna2Panel5 = New Guna.UI2.WinForms.Guna2Panel()
@@ -139,7 +140,8 @@ Partial Class Dashboard
         Guna2Panel4.BorderRadius = 16
         Guna2Panel4.BorderStyle = Drawing2D.DashStyle.Dash
         Guna2Panel4.BorderThickness = 1
-        Guna2Panel4.Controls.Add(Label5)
+        Guna2Panel4.Controls.Add(totalP)
+        Guna2Panel4.Controls.Add(Label4)
         Guna2Panel4.Controls.Add(Label6)
         Guna2Panel4.CustomizableEdges = CustomizableEdges1
         Guna2Panel4.FillColor = Color.White
@@ -153,26 +155,36 @@ Partial Class Dashboard
         Guna2Panel4.Size = New Size(224, 139)
         Guna2Panel4.TabIndex = 17
         ' 
-        ' Label5
+        ' totalP
         ' 
-        Label5.AutoSize = True
-        Label5.Font = New Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label5.Location = New Point(102, 67)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(44, 31)
-        Label5.TabIndex = 1
-        Label5.Text = "68"
+        totalP.AutoSize = True
+        totalP.Font = New Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        totalP.Location = New Point(93, 67)
+        totalP.Name = "totalP"
+        totalP.Size = New Size(44, 31)
+        totalP.TabIndex = 1
+        totalP.Text = "68"
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Font = New Font("Segoe UI", 14F)
+        Label4.ForeColor = Color.FromArgb(CByte(182), CByte(184), CByte(199))
+        Label4.Location = New Point(42, 8)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(155, 32)
+        Label4.TabIndex = 0
+        Label4.Text = "Total Patients"
         ' 
         ' Label6
         ' 
         Label6.AutoSize = True
         Label6.Font = New Font("Segoe UI", 14F)
         Label6.ForeColor = Color.FromArgb(CByte(182), CByte(184), CByte(199))
-        Label6.Location = New Point(56, 8)
+        Label6.Location = New Point(42, 8)
         Label6.Name = "Label6"
-        Label6.Size = New Size(155, 32)
+        Label6.Size = New Size(0, 32)
         Label6.TabIndex = 0
-        Label6.Text = "Total Patients"
         ' 
         ' Guna2Panel3
         ' 
@@ -180,8 +192,8 @@ Partial Class Dashboard
         Guna2Panel3.BorderRadius = 16
         Guna2Panel3.BorderStyle = Drawing2D.DashStyle.Dash
         Guna2Panel3.BorderThickness = 1
-        Guna2Panel3.Controls.Add(Label3)
-        Guna2Panel3.Controls.Add(Label4)
+        Guna2Panel3.Controls.Add(Label2)
+        Guna2Panel3.Controls.Add(lblWalkIns)
         Guna2Panel3.CustomizableEdges = CustomizableEdges3
         Guna2Panel3.FillColor = Color.White
         Guna2Panel3.Location = New Point(366, 88)
@@ -194,26 +206,25 @@ Partial Class Dashboard
         Guna2Panel3.Size = New Size(224, 139)
         Guna2Panel3.TabIndex = 15
         ' 
-        ' Label3
+        ' Label2
         ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(102, 67)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(44, 31)
-        Label3.TabIndex = 1
-        Label3.Text = "68"
+        Label2.AutoSize = True
+        Label2.Font = New Font("Segoe UI", 14F)
+        Label2.ForeColor = Color.FromArgb(CByte(182), CByte(184), CByte(199))
+        Label2.Location = New Point(65, 8)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(102, 32)
+        Label2.TabIndex = 6
+        Label2.Text = "Walk Ins"
         ' 
-        ' Label4
+        ' lblWalkIns
         ' 
-        Label4.AutoSize = True
-        Label4.Font = New Font("Segoe UI", 14F)
-        Label4.ForeColor = Color.FromArgb(CByte(182), CByte(184), CByte(199))
-        Label4.Location = New Point(56, 8)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(155, 32)
-        Label4.TabIndex = 0
-        Label4.Text = "Total Patients"
+        lblWalkIns.AutoSize = True
+        lblWalkIns.Font = New Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblWalkIns.Location = New Point(96, 67)
+        lblWalkIns.Name = "lblWalkIns"
+        lblWalkIns.Size = New Size(0, 31)
+        lblWalkIns.TabIndex = 1
         ' 
         ' Guna2HtmlLabel1
         ' 
@@ -232,7 +243,7 @@ Partial Class Dashboard
         Guna2Panel2.BorderRadius = 16
         Guna2Panel2.BorderStyle = Drawing2D.DashStyle.Dash
         Guna2Panel2.BorderThickness = 1
-        Guna2Panel2.Controls.Add(Label2)
+        Guna2Panel2.Controls.Add(lblReservation)
         Guna2Panel2.Controls.Add(Guna2PictureBox1)
         Guna2Panel2.Controls.Add(Label1)
         Guna2Panel2.CustomizableEdges = CustomizableEdges7
@@ -247,15 +258,14 @@ Partial Class Dashboard
         Guna2Panel2.Size = New Size(224, 139)
         Guna2Panel2.TabIndex = 13
         ' 
-        ' Label2
+        ' lblReservation
         ' 
-        Label2.AutoSize = True
-        Label2.Font = New Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label2.Location = New Point(102, 67)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(44, 31)
-        Label2.TabIndex = 1
-        Label2.Text = "12"
+        lblReservation.AutoSize = True
+        lblReservation.Font = New Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        lblReservation.Location = New Point(87, 67)
+        lblReservation.Name = "lblReservation"
+        lblReservation.Size = New Size(0, 31)
+        lblReservation.TabIndex = 1
         ' 
         ' Guna2PictureBox1
         ' 
@@ -277,11 +287,11 @@ Partial Class Dashboard
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 14F)
         Label1.ForeColor = Color.FromArgb(CByte(182), CByte(184), CByte(199))
-        Label1.Location = New Point(56, 8)
+        Label1.Location = New Point(40, 8)
         Label1.Name = "Label1"
-        Label1.Size = New Size(167, 32)
+        Label1.Size = New Size(147, 32)
         Label1.TabIndex = 0
-        Label1.Text = "Patients Today"
+        Label1.Text = "Reservations"
         ' 
         ' Guna2Panel5
         ' 
@@ -459,7 +469,7 @@ Partial Class Dashboard
         Guna2Button3.Image = CType(resources.GetObject("Guna2Button3.Image"), Image)
         Guna2Button3.ImageOffset = New Point(-15, 0)
         Guna2Button3.ImageSize = New Size(60, 60)
-        Guna2Button3.Location = New Point(3, 672)
+        Guna2Button3.Location = New Point(3, 581)
         Guna2Button3.Name = "Guna2Button3"
         Guna2Button3.ShadowDecoration.CustomizableEdges = CustomizableEdges26
         Guna2Button3.Size = New Size(250, 58)
@@ -485,7 +495,7 @@ Partial Class Dashboard
         Guna2Button2.ShadowDecoration.CustomizableEdges = CustomizableEdges28
         Guna2Button2.Size = New Size(258, 58)
         Guna2Button2.TabIndex = 5
-        Guna2Button2.Text = "APPOINTMENT"
+        Guna2Button2.Text = "WalkIn"
         ' 
         ' reserv
         ' 
@@ -554,14 +564,14 @@ Partial Class Dashboard
     Friend WithEvents Guna2ShadowForm1 As Guna.UI2.WinForms.Guna2ShadowForm
     Friend WithEvents Guna2Button5 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Panel4 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Label5 As Label
+    Friend WithEvents totalP As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Label3 As Label
+    Friend WithEvents lblWalkIns As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Label2 As Label
+    Friend WithEvents lblReservation As Label
     Friend WithEvents Guna2PictureBox1 As Guna.UI2.WinForms.Guna2PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Guna2Panel5 As Guna.UI2.WinForms.Guna2Panel
@@ -570,4 +580,5 @@ Partial Class Dashboard
     Friend WithEvents GunaLineDataset1 As Guna.Charts.WinForms.GunaLineDataset
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button7 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents Label2 As Label
 End Class

@@ -28,13 +28,6 @@ Partial Class PatientDashboard
         PictureBox17 = New PictureBox()
         Label35 = New Label()
         Panel11 = New Panel()
-        Label34 = New Label()
-        Label33 = New Label()
-        Label32 = New Label()
-        Label31 = New Label()
-        Label30 = New Label()
-        Label29 = New Label()
-        Label28 = New Label()
         Panel9 = New Panel()
         Label24 = New Label()
         Label23 = New Label()
@@ -59,17 +52,8 @@ Partial Class PatientDashboard
         Label15 = New Label()
         PictureBox5 = New PictureBox()
         Panel6 = New Panel()
-        Label13 = New Label()
-        Label12 = New Label()
-        PictureBox4 = New PictureBox()
         Panel5 = New Panel()
-        Label11 = New Label()
-        Label10 = New Label()
-        PictureBox3 = New PictureBox()
         Panel4 = New Panel()
-        Label9 = New Label()
-        Label8 = New Label()
-        PictureBox2 = New PictureBox()
         Panel3 = New Panel()
         Panel10 = New Panel()
         PictureBox15 = New PictureBox()
@@ -81,7 +65,6 @@ Partial Class PatientDashboard
         PictureBox9 = New PictureBox()
         PictureBox7 = New PictureBox()
         PictureBox6 = New PictureBox()
-        Label14 = New Label()
         Label5 = New Label()
         Label3 = New Label()
         Button7 = New Button()
@@ -90,24 +73,16 @@ Partial Class PatientDashboard
         Button4 = New Button()
         Button3 = New Button()
         Button2 = New Button()
-        Button1 = New Button()
         Label2 = New Label()
         Label1 = New Label()
         PictureBox1 = New PictureBox()
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         CType(PictureBox17, ComponentModel.ISupportInitialize).BeginInit()
-        Panel11.SuspendLayout()
         Panel9.SuspendLayout()
         Panel8.SuspendLayout()
         Panel7.SuspendLayout()
         CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
-        Panel6.SuspendLayout()
-        CType(PictureBox4, ComponentModel.ISupportInitialize).BeginInit()
-        Panel5.SuspendLayout()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
-        Panel4.SuspendLayout()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         Panel3.SuspendLayout()
         CType(PictureBox15, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox13, ComponentModel.ISupportInitialize).BeginInit()
@@ -177,93 +152,11 @@ Partial Class PatientDashboard
         ' Panel11
         ' 
         Panel11.BackColor = Color.LightSkyBlue
-        Panel11.Controls.Add(Label34)
-        Panel11.Controls.Add(Label33)
-        Panel11.Controls.Add(Label32)
-        Panel11.Controls.Add(Label31)
-        Panel11.Controls.Add(Label30)
-        Panel11.Controls.Add(Label29)
-        Panel11.Controls.Add(Label28)
         Panel11.Location = New Point(280, 777)
         Panel11.Margin = New Padding(3, 4, 3, 4)
         Panel11.Name = "Panel11"
         Panel11.Size = New Size(990, 207)
         Panel11.TabIndex = 7
-        ' 
-        ' Label34
-        ' 
-        Label34.AutoSize = True
-        Label34.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label34.ForeColor = SystemColors.ActiveCaptionText
-        Label34.Location = New Point(325, 124)
-        Label34.Name = "Label34"
-        Label34.Size = New Size(606, 28)
-        Label34.TabIndex = 37
-        Label34.Text = "remove bacteria, plaque and tartar buildup from your teeth surfaces."
-        ' 
-        ' Label33
-        ' 
-        Label33.AutoSize = True
-        Label33.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label33.ForeColor = SystemColors.ActiveCaptionText
-        Label33.Location = New Point(26, 124)
-        Label33.Name = "Label33"
-        Label33.Size = New Size(150, 28)
-        Label33.TabIndex = 36
-        Label33.Text = "Dental Cleaning"
-        ' 
-        ' Label32
-        ' 
-        Label32.AutoSize = True
-        Label32.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label32.ForeColor = SystemColors.ActiveCaptionText
-        Label32.Location = New Point(539, 80)
-        Label32.Name = "Label32"
-        Label32.Size = New Size(313, 28)
-        Label32.TabIndex = 35
-        Label32.Text = "gapped, rotated or crowded teeth."
-        ' 
-        ' Label31
-        ' 
-        Label31.AutoSize = True
-        Label31.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label31.ForeColor = SystemColors.ActiveCaptionText
-        Label31.Location = New Point(325, 52)
-        Label31.Name = "Label31"
-        Label31.Size = New Size(593, 28)
-        Label31.TabIndex = 34
-        Label31.Text = "Braces can correct a wide range of dental issues, including crooked,"
-        ' 
-        ' Label30
-        ' 
-        Label30.AutoSize = True
-        Label30.Font = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label30.Location = New Point(581, 19)
-        Label30.Name = "Label30"
-        Label30.Size = New Size(146, 32)
-        Label30.TabIndex = 33
-        Label30.Text = "Description"
-        ' 
-        ' Label29
-        ' 
-        Label29.AutoSize = True
-        Label29.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label29.ForeColor = SystemColors.ActiveCaptionText
-        Label29.Location = New Point(26, 56)
-        Label29.Name = "Label29"
-        Label29.Size = New Size(118, 28)
-        Label29.TabIndex = 29
-        Label29.Text = "Teeth Braces"
-        ' 
-        ' Label28
-        ' 
-        Label28.AutoSize = True
-        Label28.Font = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label28.Location = New Point(26, 19)
-        Label28.Name = "Label28"
-        Label28.Size = New Size(155, 32)
-        Label28.TabIndex = 32
-        Label28.Text = "Dental Offer"
         ' 
         ' Panel9
         ' 
@@ -324,11 +217,8 @@ Partial Class PatientDashboard
         ' Panel8
         ' 
         Panel8.BackColor = Color.LightSkyBlue
-        Panel8.Controls.Add(Button12)
-        Panel8.Controls.Add(Button11)
         Panel8.Controls.Add(Button10)
         Panel8.Controls.Add(Button9)
-        Panel8.Controls.Add(Button8)
         Panel8.Controls.Add(Label27)
         Panel8.Controls.Add(Label26)
         Panel8.Controls.Add(Label25)
@@ -336,6 +226,7 @@ Partial Class PatientDashboard
         Panel8.Controls.Add(Label20)
         Panel8.Controls.Add(Label19)
         Panel8.Controls.Add(Label17)
+        Panel8.Controls.Add(Button5)
         Panel8.Location = New Point(280, 253)
         Panel8.Margin = New Padding(3, 4, 3, 4)
         Panel8.Name = "Panel8"
@@ -345,7 +236,7 @@ Partial Class PatientDashboard
         ' Button12
         ' 
         Button12.BackColor = Color.LightBlue
-        Button12.Location = New Point(449, 435)
+        Button12.Location = New Point(75, 937)
         Button12.Margin = New Padding(3, 4, 3, 4)
         Button12.Name = "Button12"
         Button12.Size = New Size(133, 43)
@@ -356,7 +247,7 @@ Partial Class PatientDashboard
         ' Button11
         ' 
         Button11.BackColor = Color.LightBlue
-        Button11.Location = New Point(283, 435)
+        Button11.Location = New Point(75, 748)
         Button11.Margin = New Padding(3, 4, 3, 4)
         Button11.Name = "Button11"
         Button11.Size = New Size(133, 43)
@@ -367,7 +258,7 @@ Partial Class PatientDashboard
         ' Button10
         ' 
         Button10.BackColor = Color.LightBlue
-        Button10.Location = New Point(283, 360)
+        Button10.Location = New Point(11, 453)
         Button10.Margin = New Padding(3, 4, 3, 4)
         Button10.Name = "Button10"
         Button10.Size = New Size(133, 43)
@@ -389,7 +280,7 @@ Partial Class PatientDashboard
         ' Button8
         ' 
         Button8.BackColor = Color.LightBlue
-        Button8.Location = New Point(283, 218)
+        Button8.Location = New Point(75, 467)
         Button8.Margin = New Padding(3, 4, 3, 4)
         Button8.Name = "Button8"
         Button8.Size = New Size(133, 43)
@@ -477,7 +368,7 @@ Partial Class PatientDashboard
         ' 
         Label7.AutoSize = True
         Label7.Font = New Font("Verdana", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label7.Location = New Point(878, 35)
+        Label7.Location = New Point(878, 17)
         Label7.Name = "Label7"
         Label7.Size = New Size(392, 36)
         Label7.TabIndex = 4
@@ -532,146 +423,38 @@ Partial Class PatientDashboard
         ' Panel6
         ' 
         Panel6.BackColor = SystemColors.GradientActiveCaption
-        Panel6.Controls.Add(Label13)
-        Panel6.Controls.Add(Label12)
-        Panel6.Controls.Add(PictureBox4)
         Panel6.Location = New Point(776, 96)
         Panel6.Margin = New Padding(3, 4, 3, 4)
         Panel6.Name = "Panel6"
         Panel6.Size = New Size(215, 149)
         Panel6.TabIndex = 2
         ' 
-        ' Label13
-        ' 
-        Label13.AutoSize = True
-        Label13.Font = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label13.ForeColor = Color.DarkBlue
-        Label13.Location = New Point(117, 36)
-        Label13.Name = "Label13"
-        Label13.Size = New Size(72, 32)
-        Label13.TabIndex = 4
-        Label13.Text = "36.7°"
-        ' 
-        ' Label12
-        ' 
-        Label12.AutoSize = True
-        Label12.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label12.Location = New Point(19, 89)
-        Label12.Name = "Label12"
-        Label12.Size = New Size(186, 28)
-        Label12.TabIndex = 4
-        Label12.Text = "Body Temperature"
-        ' 
-        ' PictureBox4
-        ' 
-        PictureBox4.ErrorImage = Nothing
-        PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), Image)
-        PictureBox4.InitialImage = Nothing
-        PictureBox4.Location = New Point(19, 13)
-        PictureBox4.Margin = New Padding(3, 4, 3, 4)
-        PictureBox4.Name = "PictureBox4"
-        PictureBox4.Size = New Size(67, 72)
-        PictureBox4.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox4.TabIndex = 2
-        PictureBox4.TabStop = False
-        ' 
         ' Panel5
         ' 
         Panel5.BackColor = SystemColors.ActiveCaption
-        Panel5.Controls.Add(Label11)
-        Panel5.Controls.Add(Label10)
-        Panel5.Controls.Add(PictureBox3)
         Panel5.Location = New Point(530, 95)
         Panel5.Margin = New Padding(3, 4, 3, 4)
         Panel5.Name = "Panel5"
         Panel5.Size = New Size(215, 149)
         Panel5.TabIndex = 2
         ' 
-        ' Label11
-        ' 
-        Label11.AutoSize = True
-        Label11.Font = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label11.ForeColor = Color.DarkBlue
-        Label11.Location = New Point(105, 35)
-        Label11.Name = "Label11"
-        Label11.Size = New Size(101, 32)
-        Label11.TabIndex = 3
-        Label11.Text = "75 bpm"
-        ' 
-        ' Label10
-        ' 
-        Label10.AutoSize = True
-        Label10.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label10.Location = New Point(72, 88)
-        Label10.Name = "Label10"
-        Label10.Size = New Size(115, 28)
-        Label10.TabIndex = 3
-        Label10.Text = "Heart Rate"
-        ' 
-        ' PictureBox3
-        ' 
-        PictureBox3.ErrorImage = Nothing
-        PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), Image)
-        PictureBox3.InitialImage = Nothing
-        PictureBox3.Location = New Point(21, 12)
-        PictureBox3.Margin = New Padding(3, 4, 3, 4)
-        PictureBox3.Name = "PictureBox3"
-        PictureBox3.Size = New Size(67, 72)
-        PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox3.TabIndex = 1
-        PictureBox3.TabStop = False
-        ' 
         ' Panel4
         ' 
         Panel4.BackColor = SystemColors.ActiveCaption
-        Panel4.Controls.Add(Label9)
-        Panel4.Controls.Add(Label8)
-        Panel4.Controls.Add(PictureBox2)
         Panel4.Location = New Point(280, 95)
         Panel4.Margin = New Padding(3, 4, 3, 4)
         Panel4.Name = "Panel4"
         Panel4.Size = New Size(215, 149)
         Panel4.TabIndex = 1
         ' 
-        ' Label9
-        ' 
-        Label9.AutoSize = True
-        Label9.Font = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label9.ForeColor = Color.DarkBlue
-        Label9.Location = New Point(103, 36)
-        Label9.Name = "Label9"
-        Label9.Size = New Size(95, 32)
-        Label9.TabIndex = 2
-        Label9.Text = "100/70"
-        ' 
-        ' Label8
-        ' 
-        Label8.AutoSize = True
-        Label8.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label8.Location = New Point(64, 89)
-        Label8.Name = "Label8"
-        Label8.Size = New Size(132, 28)
-        Label8.TabIndex = 1
-        Label8.Text = "Blood Status"
-        ' 
-        ' PictureBox2
-        ' 
-        PictureBox2.ErrorImage = CType(resources.GetObject("PictureBox2.ErrorImage"), Image)
-        PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), Image)
-        PictureBox2.InitialImage = CType(resources.GetObject("PictureBox2.InitialImage"), Image)
-        PictureBox2.Location = New Point(15, 13)
-        PictureBox2.Margin = New Padding(3, 4, 3, 4)
-        PictureBox2.Name = "PictureBox2"
-        PictureBox2.Size = New Size(67, 72)
-        PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
-        PictureBox2.TabIndex = 0
-        PictureBox2.TabStop = False
-        ' 
         ' Panel3
         ' 
         Panel3.BackColor = Color.SteelBlue
+        Panel3.Controls.Add(Button12)
         Panel3.Controls.Add(Panel10)
+        Panel3.Controls.Add(Button11)
         Panel3.Controls.Add(PictureBox15)
+        Panel3.Controls.Add(Button8)
         Panel3.Controls.Add(PictureBox13)
         Panel3.Controls.Add(PictureBox10)
         Panel3.Controls.Add(PictureBox11)
@@ -680,16 +463,13 @@ Partial Class PatientDashboard
         Panel3.Controls.Add(PictureBox9)
         Panel3.Controls.Add(PictureBox7)
         Panel3.Controls.Add(PictureBox6)
-        Panel3.Controls.Add(Label14)
         Panel3.Controls.Add(Label5)
         Panel3.Controls.Add(Label3)
         Panel3.Controls.Add(Button7)
         Panel3.Controls.Add(Button6)
-        Panel3.Controls.Add(Button5)
         Panel3.Controls.Add(Button4)
         Panel3.Controls.Add(Button3)
         Panel3.Controls.Add(Button2)
-        Panel3.Controls.Add(Button1)
         Panel3.Controls.Add(Label2)
         Panel3.Controls.Add(Label1)
         Panel3.Controls.Add(PictureBox1)
@@ -825,17 +605,6 @@ Partial Class PatientDashboard
         PictureBox6.TabIndex = 3
         PictureBox6.TabStop = False
         ' 
-        ' Label14
-        ' 
-        Label14.AutoSize = True
-        Label14.BackColor = Color.Azure
-        Label14.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label14.Location = New Point(75, 180)
-        Label14.Name = "Label14"
-        Label14.Size = New Size(103, 20)
-        Label14.TabIndex = 14
-        Label14.Text = "Patient Picture"
-        ' 
         ' Label5
         ' 
         Label5.AutoSize = True
@@ -881,7 +650,7 @@ Partial Class PatientDashboard
         ' Button5
         ' 
         Button5.BackColor = Color.LightBlue
-        Button5.Location = New Point(75, 748)
+        Button5.Location = New Point(74, 260)
         Button5.Margin = New Padding(3, 4, 3, 4)
         Button5.Name = "Button5"
         Button5.Size = New Size(133, 43)
@@ -922,17 +691,6 @@ Partial Class PatientDashboard
         Button2.Text = "Health Records"
         Button2.UseVisualStyleBackColor = False
         ' 
-        ' Button1
-        ' 
-        Button1.BackColor = Color.LightBlue
-        Button1.Location = New Point(75, 467)
-        Button1.Margin = New Padding(3, 4, 3, 4)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(133, 43)
-        Button1.TabIndex = 3
-        Button1.Text = "Home"
-        Button1.UseVisualStyleBackColor = False
-        ' 
         ' Label2
         ' 
         Label2.AutoSize = True
@@ -949,7 +707,7 @@ Partial Class PatientDashboard
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.ForeColor = SystemColors.ButtonHighlight
-        Label1.Location = New Point(49, 200)
+        Label1.Location = New Point(31, 193)
         Label1.Name = "Label1"
         Label1.Size = New Size(177, 37)
         Label1.TabIndex = 1
@@ -959,7 +717,7 @@ Partial Class PatientDashboard
         ' 
         PictureBox1.BackColor = SystemColors.ButtonHighlight
         PictureBox1.InitialImage = Nothing
-        PictureBox1.Location = New Point(75, 71)
+        PictureBox1.Location = New Point(61, 72)
         PictureBox1.Margin = New Padding(3, 4, 3, 4)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(117, 104)
@@ -980,8 +738,6 @@ Partial Class PatientDashboard
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
         CType(PictureBox17, ComponentModel.ISupportInitialize).EndInit()
-        Panel11.ResumeLayout(False)
-        Panel11.PerformLayout()
         Panel9.ResumeLayout(False)
         Panel9.PerformLayout()
         Panel8.ResumeLayout(False)
@@ -989,15 +745,6 @@ Partial Class PatientDashboard
         Panel7.ResumeLayout(False)
         Panel7.PerformLayout()
         CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
-        Panel6.ResumeLayout(False)
-        Panel6.PerformLayout()
-        CType(PictureBox4, ComponentModel.ISupportInitialize).EndInit()
-        Panel5.ResumeLayout(False)
-        Panel5.PerformLayout()
-        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
-        Panel4.ResumeLayout(False)
-        Panel4.PerformLayout()
-        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         Panel3.ResumeLayout(False)
         Panel3.PerformLayout()
         CType(PictureBox15, ComponentModel.ISupportInitialize).EndInit()
@@ -1018,13 +765,6 @@ Partial Class PatientDashboard
     Friend WithEvents PictureBox17 As PictureBox
     Friend WithEvents Label35 As Label
     Friend WithEvents Panel11 As Panel
-    Friend WithEvents Label34 As Label
-    Friend WithEvents Label33 As Label
-    Friend WithEvents Label32 As Label
-    Friend WithEvents Label31 As Label
-    Friend WithEvents Label30 As Label
-    Friend WithEvents Label29 As Label
-    Friend WithEvents Label28 As Label
     Friend WithEvents Panel9 As Panel
     Friend WithEvents Label24 As Label
     Friend WithEvents Label23 As Label
@@ -1044,17 +784,8 @@ Partial Class PatientDashboard
     Friend WithEvents Label15 As Label
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents Panel6 As Panel
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Label12 As Label
-    Friend WithEvents PictureBox4 As PictureBox
     Friend WithEvents Panel5 As Panel
-    Friend WithEvents Label11 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Panel4 As Panel
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel10 As Panel
     Friend WithEvents PictureBox15 As PictureBox
@@ -1066,7 +797,6 @@ Partial Class PatientDashboard
     Friend WithEvents PictureBox9 As PictureBox
     Friend WithEvents PictureBox7 As PictureBox
     Friend WithEvents PictureBox6 As PictureBox
-    Friend WithEvents Label14 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Button7 As Button
@@ -1075,7 +805,6 @@ Partial Class PatientDashboard
     Friend WithEvents Button4 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
