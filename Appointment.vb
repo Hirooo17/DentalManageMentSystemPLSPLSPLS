@@ -4,7 +4,8 @@ Imports MySql.Data.MySqlClient
 
 Public Class Appointment
 
-    Private patientName As String
+    Public patientName As String
+
 
     Public Sub New(name As String)
 
@@ -31,7 +32,7 @@ Public Class Appointment
 
     End Sub
 
-    Private Sub SaveAppointment(name As String)
+    Public Sub SaveAppointment(name As String)
 
         Dim sql = "INSERT INTO appointment (fullname, date) VALUES (@name, @date)"
 
@@ -46,7 +47,7 @@ Public Class Appointment
         End Using
 
         ' Refresh the Appointment Viewer Form
-        Dim appointmentViewerForm As AppointmentViewerForm = appointmentViewerForm.GetInstance()
+        Dim appointmentViewerForm As AppointmentViewerForm = AppointmentViewerForm.GetInstance()
 
     End Sub
 

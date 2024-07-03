@@ -81,21 +81,33 @@ Public Class procedure
     End Sub
 
     Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
-        Dim result As DialogResult = MessageBox.Show("Will the patient go back?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-
-        If result = DialogResult.Yes Then
-            goBack.Show()
 
 
-        Else
+        ' Retrieve selected treatment and patient name
+        Dim treatment As String = cmbProcedure.SelectedItem
+        Dim name As String = cbNames.SelectedItem
 
+        ' Validate if both treatment and name are selected
+        If String.IsNullOrEmpty(treatment) OrElse String.IsNullOrEmpty(name) Then
+            MessageBox.Show("Please select a treatment and a patient name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return
         End If
 
+        ' Call method to send data to updateData method in Form1 (assuming Form1 is named as PatientDashboard)
+        Dim p As New PatientDashboard()
 
+
+        p.updateData(treatment, name)
+
+
+
+
+        p.showData()
 
     End Sub
 
-    Private Sub timeIn_TextChanged(sender As Object, e As EventArgs) Handles timeIn.TextChanged
+    Private Sub cmbProcedure_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbProcedure.SelectedIndexChanged
+
 
     End Sub
 End Class

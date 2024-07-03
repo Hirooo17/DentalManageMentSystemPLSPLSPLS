@@ -87,6 +87,7 @@ Partial Class Reservation
         Guna2BorderlessForm1.AnimateWindow = True
         Guna2BorderlessForm1.ContainerControl = Me
         Guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6R
+        Guna2BorderlessForm1.DragForm = False
         Guna2BorderlessForm1.TransparentWhileDrag = True
         ' 
         ' WelcomeLbl

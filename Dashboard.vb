@@ -167,7 +167,7 @@ Public Class Dashboard
 
     End Sub
 
-    Private Sub Guna2Button4_Click(sender As Object, e As EventArgs) Handles Guna2Button4.Click
+    Private Sub Guna2Button4_Click(sender As Object, e As EventArgs)
         switchPanel(current_profile)
     End Sub
 
@@ -182,7 +182,7 @@ Public Class Dashboard
         form1Instance.Show()
     End Sub
 
-    Private Sub Guna2ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Guna2ComboBox1.SelectedIndexChanged
+    Private Sub Guna2ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs)
 
 
     End Sub

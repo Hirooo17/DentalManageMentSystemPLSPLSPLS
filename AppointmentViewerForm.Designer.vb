@@ -26,8 +26,6 @@ Partial Class AppointmentViewerForm
         Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
@@ -38,7 +36,6 @@ Partial Class AppointmentViewerForm
         dataGridA = New Guna.UI2.WinForms.Guna2DataGridView()
         cbStatus = New Guna.UI2.WinForms.Guna2ComboBox()
         Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
-        Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         cBId = New Guna.UI2.WinForms.Guna2ComboBox()
         Guna2HtmlLabel2 = New Guna.UI2.WinForms.Guna2HtmlLabel()
         Guna2Button2 = New Guna.UI2.WinForms.Guna2Button()
@@ -109,7 +106,7 @@ Partial Class AppointmentViewerForm
         ' cbStatus
         ' 
         cbStatus.BackColor = Color.Transparent
-        cbStatus.CustomizableEdges = CustomizableEdges7
+        cbStatus.CustomizableEdges = CustomizableEdges5
         cbStatus.DrawMode = DrawMode.OwnerDrawFixed
         cbStatus.DropDownStyle = ComboBoxStyle.DropDownList
         cbStatus.FocusedColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
@@ -120,7 +117,7 @@ Partial Class AppointmentViewerForm
         cbStatus.Items.AddRange(New Object() {"Cancelled", "Coming Back", "Completed", "No Show"})
         cbStatus.Location = New Point(51, 661)
         cbStatus.Name = "cbStatus"
-        cbStatus.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        cbStatus.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         cbStatus.Size = New Size(297, 36)
         cbStatus.TabIndex = 1
         ' 
@@ -133,22 +130,6 @@ Partial Class AppointmentViewerForm
         Guna2HtmlLabel1.Size = New Size(146, 33)
         Guna2HtmlLabel1.TabIndex = 2
         Guna2HtmlLabel1.Text = "Edit Status for"
-        ' 
-        ' Guna2Button1
-        ' 
-        Guna2Button1.CustomizableEdges = CustomizableEdges5
-        Guna2Button1.DisabledState.BorderColor = Color.DarkGray
-        Guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2Button1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2Button1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        Guna2Button1.Font = New Font("Segoe UI", 9F)
-        Guna2Button1.ForeColor = Color.White
-        Guna2Button1.Location = New Point(51, 718)
-        Guna2Button1.Name = "Guna2Button1"
-        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges6
-        Guna2Button1.Size = New Size(225, 56)
-        Guna2Button1.TabIndex = 4
-        Guna2Button1.Text = "Confirm"
         ' 
         ' cBId
         ' 
@@ -186,7 +167,7 @@ Partial Class AppointmentViewerForm
         Guna2Button2.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2Button2.Font = New Font("Segoe UI", 9F)
         Guna2Button2.ForeColor = Color.White
-        Guna2Button2.Location = New Point(303, 718)
+        Guna2Button2.Location = New Point(51, 703)
         Guna2Button2.Name = "Guna2Button2"
         Guna2Button2.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         Guna2Button2.Size = New Size(225, 56)
@@ -201,6 +182,7 @@ Partial Class AppointmentViewerForm
         patientTxt.Name = "patientTxt"
         patientTxt.Size = New Size(3, 2)
         patientTxt.TabIndex = 8
+        patientTxt.Text = Nothing
         ' 
         ' AppointmentViewerForm
         ' 
@@ -211,7 +193,6 @@ Partial Class AppointmentViewerForm
         Controls.Add(Guna2Button2)
         Controls.Add(Guna2HtmlLabel2)
         Controls.Add(cBId)
-        Controls.Add(Guna2Button1)
         Controls.Add(Guna2HtmlLabel1)
         Controls.Add(cbStatus)
         Controls.Add(dataGridA)
@@ -226,7 +207,6 @@ Partial Class AppointmentViewerForm
     Friend WithEvents dataGridA As Guna.UI2.WinForms.Guna2DataGridView
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents cbStatus As Guna.UI2.WinForms.Guna2ComboBox
-    Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents cBId As Guna.UI2.WinForms.Guna2ComboBox
     Friend WithEvents Guna2HtmlLabel2 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2Button2 As Guna.UI2.WinForms.Guna2Button

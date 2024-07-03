@@ -22,29 +22,21 @@ Partial Class PatientDashboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PatientDashboard))
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Panel1 = New Panel()
         Panel2 = New Panel()
         PictureBox17 = New PictureBox()
         Label35 = New Label()
         Panel11 = New Panel()
         Panel9 = New Panel()
-        Label24 = New Label()
-        Label23 = New Label()
-        Label22 = New Label()
-        Label18 = New Label()
-        Panel8 = New Panel()
-        Button12 = New Button()
-        Button11 = New Button()
-        Button10 = New Button()
         Button9 = New Button()
-        Button8 = New Button()
-        Label27 = New Label()
-        Label26 = New Label()
-        Label25 = New Label()
-        Label21 = New Label()
-        Label20 = New Label()
-        Label19 = New Label()
+        Panel8 = New Panel()
+        Label4 = New Label()
+        dataGridA = New Guna.UI2.WinForms.Guna2DataGridView()
         Label17 = New Label()
         Label7 = New Label()
         Panel7 = New Panel()
@@ -55,7 +47,10 @@ Partial Class PatientDashboard
         Panel5 = New Panel()
         Panel4 = New Panel()
         Panel3 = New Panel()
+        Button10 = New Button()
+        Button12 = New Button()
         Panel10 = New Panel()
+        Button11 = New Button()
         PictureBox15 = New PictureBox()
         PictureBox13 = New PictureBox()
         PictureBox10 = New PictureBox()
@@ -69,18 +64,17 @@ Partial Class PatientDashboard
         Label3 = New Label()
         Button7 = New Button()
         Button6 = New Button()
-        Button5 = New Button()
         Button4 = New Button()
-        Button3 = New Button()
         Button2 = New Button()
         Label2 = New Label()
         Label1 = New Label()
         PictureBox1 = New PictureBox()
+        Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(components)
         Panel1.SuspendLayout()
         Panel2.SuspendLayout()
         CType(PictureBox17, ComponentModel.ISupportInitialize).BeginInit()
-        Panel9.SuspendLayout()
         Panel8.SuspendLayout()
+        CType(dataGridA, ComponentModel.ISupportInitialize).BeginInit()
         Panel7.SuspendLayout()
         CType(PictureBox5, ComponentModel.ISupportInitialize).BeginInit()
         Panel3.SuspendLayout()
@@ -100,10 +94,11 @@ Partial Class PatientDashboard
         ' 
         Panel1.BackColor = Color.LightSkyBlue
         Panel1.Controls.Add(Panel2)
-        Panel1.Location = New Point(3, 4)
+        Panel1.Dock = DockStyle.Fill
+        Panel1.Location = New Point(0, 0)
         Panel1.Margin = New Padding(3, 4, 3, 4)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(1406, 1095)
+        Panel1.Size = New Size(1413, 1102)
         Panel1.TabIndex = 1
         ' 
         ' Panel2
@@ -161,115 +156,16 @@ Partial Class PatientDashboard
         ' Panel9
         ' 
         Panel9.BackColor = Color.LightSkyBlue
-        Panel9.Controls.Add(Label24)
-        Panel9.Controls.Add(Label23)
-        Panel9.Controls.Add(Label22)
-        Panel9.Controls.Add(Label18)
         Panel9.Location = New Point(1022, 253)
         Panel9.Margin = New Padding(3, 4, 3, 4)
         Panel9.Name = "Panel9"
         Panel9.Size = New Size(248, 500)
         Panel9.TabIndex = 6
         ' 
-        ' Label24
-        ' 
-        Label24.AutoSize = True
-        Label24.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label24.ForeColor = SystemColors.ActiveCaptionText
-        Label24.Location = New Point(21, 185)
-        Label24.Name = "Label24"
-        Label24.Size = New Size(166, 28)
-        Label24.TabIndex = 28
-        Label24.Text = "Request Form.pdf"
-        ' 
-        ' Label23
-        ' 
-        Label23.AutoSize = True
-        Label23.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label23.ForeColor = SystemColors.ActiveCaptionText
-        Label23.Location = New Point(3, 132)
-        Label23.Name = "Label23"
-        Label23.Size = New Size(247, 28)
-        Label23.TabIndex = 27
-        Label23.Text = "Appointment Schedule.pdf"
-        ' 
-        ' Label22
-        ' 
-        Label22.AutoSize = True
-        Label22.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label22.ForeColor = SystemColors.ActiveCaptionText
-        Label22.Location = New Point(21, 80)
-        Label22.Name = "Label22"
-        Label22.Size = New Size(172, 28)
-        Label22.TabIndex = 26
-        Label22.Text = "Lab Test Result.pdf"
-        ' 
-        ' Label18
-        ' 
-        Label18.AutoSize = True
-        Label18.Font = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label18.Location = New Point(26, 16)
-        Label18.Name = "Label18"
-        Label18.Size = New Size(144, 32)
-        Label18.TabIndex = 4
-        Label18.Text = "Documents"
-        ' 
-        ' Panel8
-        ' 
-        Panel8.BackColor = Color.LightSkyBlue
-        Panel8.Controls.Add(Button10)
-        Panel8.Controls.Add(Button9)
-        Panel8.Controls.Add(Label27)
-        Panel8.Controls.Add(Label26)
-        Panel8.Controls.Add(Label25)
-        Panel8.Controls.Add(Label21)
-        Panel8.Controls.Add(Label20)
-        Panel8.Controls.Add(Label19)
-        Panel8.Controls.Add(Label17)
-        Panel8.Controls.Add(Button5)
-        Panel8.Location = New Point(280, 253)
-        Panel8.Margin = New Padding(3, 4, 3, 4)
-        Panel8.Name = "Panel8"
-        Panel8.Size = New Size(711, 500)
-        Panel8.TabIndex = 5
-        ' 
-        ' Button12
-        ' 
-        Button12.BackColor = Color.LightBlue
-        Button12.Location = New Point(75, 937)
-        Button12.Margin = New Padding(3, 4, 3, 4)
-        Button12.Name = "Button12"
-        Button12.Size = New Size(133, 43)
-        Button12.TabIndex = 34
-        Button12.Text = "view profile"
-        Button12.UseVisualStyleBackColor = False
-        ' 
-        ' Button11
-        ' 
-        Button11.BackColor = Color.LightBlue
-        Button11.Location = New Point(75, 748)
-        Button11.Margin = New Padding(3, 4, 3, 4)
-        Button11.Name = "Button11"
-        Button11.Size = New Size(133, 43)
-        Button11.TabIndex = 33
-        Button11.Text = "create profile"
-        Button11.UseVisualStyleBackColor = False
-        ' 
-        ' Button10
-        ' 
-        Button10.BackColor = Color.LightBlue
-        Button10.Location = New Point(11, 453)
-        Button10.Margin = New Padding(3, 4, 3, 4)
-        Button10.Name = "Button10"
-        Button10.Size = New Size(133, 43)
-        Button10.TabIndex = 26
-        Button10.Text = "Logout"
-        Button10.UseVisualStyleBackColor = False
-        ' 
         ' Button9
         ' 
         Button9.BackColor = Color.LightBlue
-        Button9.Location = New Point(283, 288)
+        Button9.Location = New Point(77, 937)
         Button9.Margin = New Padding(3, 4, 3, 4)
         Button9.Name = "Button9"
         Button9.Size = New Size(133, 43)
@@ -277,82 +173,78 @@ Partial Class PatientDashboard
         Button9.Text = "Refresh"
         Button9.UseVisualStyleBackColor = False
         ' 
-        ' Button8
+        ' Panel8
         ' 
-        Button8.BackColor = Color.LightBlue
-        Button8.Location = New Point(75, 467)
-        Button8.Margin = New Padding(3, 4, 3, 4)
-        Button8.Name = "Button8"
-        Button8.Size = New Size(133, 43)
-        Button8.TabIndex = 26
-        Button8.Text = "Home"
-        Button8.UseVisualStyleBackColor = False
+        Panel8.BackColor = Color.LightSkyBlue
+        Panel8.Controls.Add(Label4)
+        Panel8.Controls.Add(dataGridA)
+        Panel8.Controls.Add(Label17)
+        Panel8.Location = New Point(280, 253)
+        Panel8.Margin = New Padding(3, 4, 3, 4)
+        Panel8.Name = "Panel8"
+        Panel8.Size = New Size(711, 500)
+        Panel8.TabIndex = 5
         ' 
-        ' Label27
+        ' Label4
         ' 
-        Label27.AutoSize = True
-        Label27.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label27.ForeColor = SystemColors.ActiveCaptionText
-        Label27.Location = New Point(26, 111)
-        Label27.Name = "Label27"
-        Label27.Size = New Size(116, 28)
-        Label27.TabIndex = 31
-        Label27.Text = "03-15-2024"
+        Label4.AutoSize = True
+        Label4.Font = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        Label4.Location = New Point(392, 11)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(307, 64)
+        Label4.TabIndex = 6
+        Label4.Text = "Book for an Appointment" & vbCrLf & "to see status"
         ' 
-        ' Label26
+        ' dataGridA
         ' 
-        Label26.AutoSize = True
-        Label26.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label26.ForeColor = SystemColors.ActiveCaptionText
-        Label26.Location = New Point(403, 111)
-        Label26.Name = "Label26"
-        Label26.Size = New Size(129, 28)
-        Label26.TabIndex = 30
-        Label26.Text = "Dental Braces"
-        ' 
-        ' Label25
-        ' 
-        Label25.AutoSize = True
-        Label25.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label25.ForeColor = SystemColors.ActiveCaptionText
-        Label25.Location = New Point(171, 111)
-        Label25.Name = "Label25"
-        Label25.Size = New Size(116, 28)
-        Label25.TabIndex = 29
-        Label25.Text = "Dental Issue"
-        ' 
-        ' Label21
-        ' 
-        Label21.AutoSize = True
-        Label21.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label21.ForeColor = SystemColors.ActiveCaptionText
-        Label21.Location = New Point(403, 64)
-        Label21.Name = "Label21"
-        Label21.Size = New Size(109, 28)
-        Label21.TabIndex = 28
-        Label21.Text = "Treatment"
-        ' 
-        ' Label20
-        ' 
-        Label20.AutoSize = True
-        Label20.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label20.ForeColor = SystemColors.ActiveCaptionText
-        Label20.Location = New Point(171, 64)
-        Label20.Name = "Label20"
-        Label20.Size = New Size(68, 28)
-        Label20.TabIndex = 27
-        Label20.Text = "Name"
-        ' 
-        ' Label19
-        ' 
-        Label19.AutoSize = True
-        Label19.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        Label19.ForeColor = SystemColors.ActiveCaptionText
-        Label19.Location = New Point(26, 64)
-        Label19.Name = "Label19"
-        Label19.Size = New Size(57, 28)
-        Label19.TabIndex = 26
-        Label19.Text = "Date"
+        DataGridViewCellStyle4.BackColor = Color.White
+        dataGridA.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
+        DataGridViewCellStyle5.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle5.ForeColor = Color.White
+        DataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = DataGridViewTriState.True
+        dataGridA.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        dataGridA.ColumnHeadersHeight = 4
+        dataGridA.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        DataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle6.BackColor = Color.White
+        DataGridViewCellStyle6.Font = New Font("Segoe UI", 9F)
+        DataGridViewCellStyle6.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        DataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        DataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        DataGridViewCellStyle6.WrapMode = DataGridViewTriState.False
+        dataGridA.DefaultCellStyle = DataGridViewCellStyle6
+        dataGridA.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        dataGridA.Location = New Point(26, 117)
+        dataGridA.Name = "dataGridA"
+        dataGridA.RowHeadersVisible = False
+        dataGridA.RowHeadersWidth = 51
+        dataGridA.Size = New Size(673, 361)
+        dataGridA.TabIndex = 5
+        dataGridA.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White
+        dataGridA.ThemeStyle.AlternatingRowsStyle.Font = Nothing
+        dataGridA.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty
+        dataGridA.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty
+        dataGridA.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty
+        dataGridA.ThemeStyle.BackColor = Color.White
+        dataGridA.ThemeStyle.GridColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        dataGridA.ThemeStyle.HeaderStyle.BackColor = Color.FromArgb(CByte(100), CByte(88), CByte(255))
+        dataGridA.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None
+        dataGridA.ThemeStyle.HeaderStyle.Font = New Font("Segoe UI", 9F)
+        dataGridA.ThemeStyle.HeaderStyle.ForeColor = Color.White
+        dataGridA.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing
+        dataGridA.ThemeStyle.HeaderStyle.Height = 4
+        dataGridA.ThemeStyle.ReadOnly = False
+        dataGridA.ThemeStyle.RowsStyle.BackColor = Color.White
+        dataGridA.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal
+        dataGridA.ThemeStyle.RowsStyle.Font = New Font("Segoe UI", 9F)
+        dataGridA.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
+        dataGridA.ThemeStyle.RowsStyle.Height = 29
+        dataGridA.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(CByte(231), CByte(229), CByte(255))
+        dataGridA.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(CByte(71), CByte(69), CByte(94))
         ' 
         ' Label17
         ' 
@@ -450,11 +342,12 @@ Partial Class PatientDashboard
         ' Panel3
         ' 
         Panel3.BackColor = Color.SteelBlue
+        Panel3.Controls.Add(Button9)
+        Panel3.Controls.Add(Button10)
         Panel3.Controls.Add(Button12)
         Panel3.Controls.Add(Panel10)
         Panel3.Controls.Add(Button11)
         Panel3.Controls.Add(PictureBox15)
-        Panel3.Controls.Add(Button8)
         Panel3.Controls.Add(PictureBox13)
         Panel3.Controls.Add(PictureBox10)
         Panel3.Controls.Add(PictureBox11)
@@ -468,7 +361,6 @@ Partial Class PatientDashboard
         Panel3.Controls.Add(Button7)
         Panel3.Controls.Add(Button6)
         Panel3.Controls.Add(Button4)
-        Panel3.Controls.Add(Button3)
         Panel3.Controls.Add(Button2)
         Panel3.Controls.Add(Label2)
         Panel3.Controls.Add(Label1)
@@ -479,6 +371,28 @@ Partial Class PatientDashboard
         Panel3.Size = New Size(256, 1003)
         Panel3.TabIndex = 0
         ' 
+        ' Button10
+        ' 
+        Button10.BackColor = Color.LightBlue
+        Button10.Location = New Point(77, 883)
+        Button10.Margin = New Padding(3, 4, 3, 4)
+        Button10.Name = "Button10"
+        Button10.Size = New Size(133, 43)
+        Button10.TabIndex = 26
+        Button10.Text = "Logout"
+        Button10.UseVisualStyleBackColor = False
+        ' 
+        ' Button12
+        ' 
+        Button12.BackColor = Color.LightBlue
+        Button12.Location = New Point(75, 467)
+        Button12.Margin = New Padding(3, 4, 3, 4)
+        Button12.Name = "Button12"
+        Button12.Size = New Size(133, 43)
+        Button12.TabIndex = 34
+        Button12.Text = "view profile"
+        Button12.UseVisualStyleBackColor = False
+        ' 
         ' Panel10
         ' 
         Panel10.BackColor = Color.Azure
@@ -487,6 +401,17 @@ Partial Class PatientDashboard
         Panel10.Name = "Panel10"
         Panel10.Size = New Size(256, 13)
         Panel10.TabIndex = 25
+        ' 
+        ' Button11
+        ' 
+        Button11.BackColor = Color.LightBlue
+        Button11.Location = New Point(77, 684)
+        Button11.Margin = New Padding(3, 4, 3, 4)
+        Button11.Name = "Button11"
+        Button11.Size = New Size(133, 43)
+        Button11.TabIndex = 33
+        Button11.Text = "create profile"
+        Button11.UseVisualStyleBackColor = False
         ' 
         ' PictureBox15
         ' 
@@ -628,18 +553,18 @@ Partial Class PatientDashboard
         ' Button7
         ' 
         Button7.BackColor = Color.LightBlue
-        Button7.Location = New Point(75, 883)
+        Button7.Location = New Point(77, 815)
         Button7.Margin = New Padding(3, 4, 3, 4)
         Button7.Name = "Button7"
         Button7.Size = New Size(133, 43)
         Button7.TabIndex = 9
-        Button7.Text = "Settings"
+        Button7.Text = "Book"
         Button7.UseVisualStyleBackColor = False
         ' 
         ' Button6
         ' 
         Button6.BackColor = Color.LightBlue
-        Button6.Location = New Point(75, 815)
+        Button6.Location = New Point(77, 748)
         Button6.Margin = New Padding(3, 4, 3, 4)
         Button6.Name = "Button6"
         Button6.Size = New Size(133, 43)
@@ -647,38 +572,16 @@ Partial Class PatientDashboard
         Button6.Text = "Messages"
         Button6.UseVisualStyleBackColor = False
         ' 
-        ' Button5
-        ' 
-        Button5.BackColor = Color.LightBlue
-        Button5.Location = New Point(74, 260)
-        Button5.Margin = New Padding(3, 4, 3, 4)
-        Button5.Name = "Button5"
-        Button5.Size = New Size(133, 43)
-        Button5.TabIndex = 7
-        Button5.Text = "Profile"
-        Button5.UseVisualStyleBackColor = False
-        ' 
         ' Button4
         ' 
         Button4.BackColor = Color.LightBlue
-        Button4.Location = New Point(75, 684)
+        Button4.Location = New Point(77, 609)
         Button4.Margin = New Padding(3, 4, 3, 4)
         Button4.Name = "Button4"
         Button4.Size = New Size(133, 43)
         Button4.TabIndex = 6
         Button4.Text = "Logs"
         Button4.UseVisualStyleBackColor = False
-        ' 
-        ' Button3
-        ' 
-        Button3.BackColor = Color.LightBlue
-        Button3.Location = New Point(75, 609)
-        Button3.Margin = New Padding(3, 4, 3, 4)
-        Button3.Name = "Button3"
-        Button3.Size = New Size(133, 43)
-        Button3.TabIndex = 5
-        Button3.Text = "Payments"
-        Button3.UseVisualStyleBackColor = False
         ' 
         ' Button2
         ' 
@@ -725,6 +628,12 @@ Partial Class PatientDashboard
         PictureBox1.TabIndex = 0
         PictureBox1.TabStop = False
         ' 
+        ' Guna2BorderlessForm1
+        ' 
+        Guna2BorderlessForm1.ContainerControl = Me
+        Guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6R
+        Guna2BorderlessForm1.TransparentWhileDrag = True
+        ' 
         ' PatientDashboard
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
@@ -738,10 +647,9 @@ Partial Class PatientDashboard
         Panel2.ResumeLayout(False)
         Panel2.PerformLayout()
         CType(PictureBox17, ComponentModel.ISupportInitialize).EndInit()
-        Panel9.ResumeLayout(False)
-        Panel9.PerformLayout()
         Panel8.ResumeLayout(False)
         Panel8.PerformLayout()
+        CType(dataGridA, ComponentModel.ISupportInitialize).EndInit()
         Panel7.ResumeLayout(False)
         Panel7.PerformLayout()
         CType(PictureBox5, ComponentModel.ISupportInitialize).EndInit()
@@ -766,17 +674,7 @@ Partial Class PatientDashboard
     Friend WithEvents Label35 As Label
     Friend WithEvents Panel11 As Panel
     Friend WithEvents Panel9 As Panel
-    Friend WithEvents Label24 As Label
-    Friend WithEvents Label23 As Label
-    Friend WithEvents Label22 As Label
-    Friend WithEvents Label18 As Label
     Friend WithEvents Panel8 As Panel
-    Friend WithEvents Label27 As Label
-    Friend WithEvents Label26 As Label
-    Friend WithEvents Label25 As Label
-    Friend WithEvents Label21 As Label
-    Friend WithEvents Label20 As Label
-    Friend WithEvents Label19 As Label
     Friend WithEvents Label17 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Panel7 As Panel
@@ -801,16 +699,16 @@ Partial Class PatientDashboard
     Friend WithEvents Label3 As Label
     Friend WithEvents Button7 As Button
     Friend WithEvents Button6 As Button
-    Friend WithEvents Button5 As Button
     Friend WithEvents Button4 As Button
-    Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Button8 As Button
     Friend WithEvents Button9 As Button
     Friend WithEvents Button10 As Button
     Friend WithEvents Button11 As Button
     Friend WithEvents Button12 As Button
+    Friend WithEvents Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm
+    Friend WithEvents dataGridA As Guna.UI2.WinForms.Guna2DataGridView
+    Friend WithEvents Label4 As Label
 End Class

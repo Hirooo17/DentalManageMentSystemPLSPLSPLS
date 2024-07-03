@@ -96,8 +96,8 @@ Public Class AppointmentViewerForm
 
 
 
-    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs) Handles Guna2Button1.Click
-        RefreshDataGrid()
+    Private Sub Guna2Button1_Click(sender As Object, e As EventArgs)
+        RefreshDataGrid
         MsgBox("Status Updated!")
     End Sub
 
@@ -156,4 +156,8 @@ Public Class AppointmentViewerForm
 
         RefreshDataGrid()
     End Sub
+
+
+
+
 End Class

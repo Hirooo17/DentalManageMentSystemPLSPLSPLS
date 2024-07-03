@@ -18,7 +18,7 @@ Public Class patient_createAccount
     Dim VerificationCode As String = random.Next(100000, 999999).ToString()
 
     Dim username As String = "retuermahero17@gmail.com"
-    Dim password As String = "pgpvvtgq dympvmzs"
+    Dim password As String = "pgpvvtgqdympvmzs"
 
     Private Sub sendVerificationCode()
         Try

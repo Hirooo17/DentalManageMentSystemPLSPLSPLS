@@ -150,7 +150,7 @@ Partial Class procedure
         Guna2Button1.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
         Guna2Button1.Font = New Font("Segoe UI", 9F)
         Guna2Button1.ForeColor = Color.White
-        Guna2Button1.Location = New Point(699, 797)
+        Guna2Button1.Location = New Point(320, 158)
         Guna2Button1.Name = "Guna2Button1"
         Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         Guna2Button1.Size = New Size(225, 56)
@@ -227,7 +227,7 @@ Partial Class procedure
         Guna2HtmlLabel3.Name = "Guna2HtmlLabel3"
         Guna2HtmlLabel3.Size = New Size(149, 30)
         Guna2HtmlLabel3.TabIndex = 4
-        Guna2HtmlLabel3.Text = "Select Procedure"
+        Guna2HtmlLabel3.Text = "Select Treatment"
         ' 
         ' cmbProcedure
         ' 

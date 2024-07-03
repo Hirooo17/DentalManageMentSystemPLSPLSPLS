@@ -27,7 +27,12 @@ Public Class PatientLogForm
             LoggedInUserID = userID ' Store the logged-in user ID
             LoggedInUserImage = GetUserImage(userID) ' Store the logged-in user image
             LoggedInUserName = GetUserName(userID) ' Store the logged-in user name
+
+            insertUsername()
+
+
             Me.Hide()
+
             PatientDashboard.Show()
         Else
             MessageBox.Show("Invalid username or password. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -118,6 +123,78 @@ Public Class PatientLogForm
             Return String.Empty
         Finally
             ' Close the connection
+            closeCon()
+        End Try
+    End Function
+
+    Public Sub insertUsername()
+        ' Assuming this is your variable or control holding the name to insert
+        Dim name As String = LoggedInUserName
+
+        ' Check if the name already exists in the patient_current_status table
+        If Not IsNameAlreadyExists(name) Then
+            ' Name does not exist, proceed with insertion
+            Dim sql As String = "INSERT INTO patient_current_status (name, ID) VALUES (@name, @ID)"
+
+            Try
+                ' Open the database connection
+                openCon()
+
+                ' Set up command
+                Using cmd As New MySqlCommand(sql, con)
+                    ' Add parameters for the name and ID
+                    cmd.Parameters.AddWithValue("@name", name)
+                    cmd.Parameters.AddWithValue("@ID", LoggedInUserID) ' Assuming LoggedInUserID is the ID of the current user
+
+                    ' Execute the command
+                    Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+
+                    ' Check if the insertion was successful
+                    If rowsAffected > 0 Then
+                        MessageBox.Show("Name inserted successfully!")
+                    Else
+                        MessageBox.Show("Failed to insert name.")
+                    End If
+                End Using
+
+            Catch ex As Exception
+                MessageBox.Show($"An error occurred: {ex.Message}")
+            Finally
+                ' Close the database connection
+                closeCon()
+            End Try
+        Else
+            ' Name already exists, show message or proceed as needed
+            MessageBox.Show("Name already exists in the database. Proceeding with existing name.")
+            ' Proceed with whatever action is needed when the name exists
+        End If
+
+    End Sub
+
+    Private Function IsNameAlreadyExists(name As String) As Boolean
+        Try
+            ' Open the database connection
+            openCon()
+
+            ' Prepare SQL SELECT statement to check if the name exists
+            Dim query As String = "SELECT COUNT(*) FROM patient_current_status WHERE name = @name"
+
+            Using cmd As New MySqlCommand(query, con)
+                ' Add parameter for the name
+                cmd.Parameters.AddWithValue("@name", name)
+
+                ' Execute the command and get the count of rows
+                Dim result As Integer = Convert.ToInt32(cmd.ExecuteScalar())
+
+                ' If result is greater than 0, name exists; otherwise, it does not
+                Return result > 0
+            End Using
+
+        Catch ex As Exception
+            MessageBox.Show($"An error occurred while checking name existence: {ex.Message}")
+            Return False ' Return false in case of error
+        Finally
+            ' Close the database connection
             closeCon()
         End Try
     End Function

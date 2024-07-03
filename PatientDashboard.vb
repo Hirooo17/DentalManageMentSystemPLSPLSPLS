@@ -1,13 +1,121 @@
 ﻿Imports System.IO
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Imports MySql.Data.MySqlClient
+Imports ZstdSharp.Unsafe
 
 Public Class PatientDashboard
 
+    Private procedure As String
+    Private userId As String
+    Private Sub PatientDashboard_Load(sender As Object, e As EventArgs) Handles Me.Load
+        showData()
+        Dim name As String = PatientLogForm.LoggedInUserName
+        ' Display the logged-in user's name
+        Label1.Text = PatientLogForm.LoggedInUserName
+
+        loadTreatment(name)
+
+        ' Display the logged-in user's image
+        If PatientLogForm.LoggedInUserImage IsNot Nothing Then
+            Dim imageData As Byte() = PatientLogForm.LoggedInUserImage
+            Using ms As New MemoryStream(imageData)
+                PictureBox1.Image = Image.FromStream(ms)
+            End Using
+        Else
+            PictureBox1.Image = Nothing
+        End If
+    End Sub
 
 
 
 
-    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+    Public Sub getInfo(procedure As String, userId As String)
+
+        Me.procedure = procedure
+        Me.userId = userId
+
+    End Sub
+
+    Public Sub showData()
+        Try
+            ' Open the database connection
+            openCon()
+
+            ' Construct SQL SELECT statement to retrieve data for the logged-in user
+            Dim sql As String = "SELECT name, status, treatment, date FROM patient_current_status WHERE ID = @ID"
+
+            Using cmd As New MySqlCommand(sql, con)
+                ' Add parameter for ID (assuming it's the ID of the logged-in user)
+                cmd.Parameters.AddWithValue("@ID", PatientLogForm.LoggedInUserID)
+
+                ' Execute the command and get a data reader
+                Using reader As MySqlDataReader = cmd.ExecuteReader()
+                    ' Create a DataTable to hold the data
+                    Dim dataTable As New DataTable()
+
+                    ' Load the data from the data reader into the DataTable
+                    dataTable.Load(reader)
+
+                    ' Rename the columns
+                    dataTable.Columns("name").ColumnName = "Name"
+                    dataTable.Columns("status").ColumnName = "Status"
+                    dataTable.Columns("treatment").ColumnName = "Treatment"
+                    dataTable.Columns("date").ColumnName = "Date"
+
+                    ' Set the DataTable as the DataSource for the DataGridView (dataGridA)
+                    dataGridA.DataSource = dataTable
+                End Using
+            End Using
+
+        Catch ex As Exception
+            ' Handle any errors
+            MessageBox.Show("Error loading data from database: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        Finally
+            ' Close the database connection
+            closeCon()
+        End Try
+    End Sub
+
+    Public Sub updateData(treatment As String, name As String)
+        Try
+            ' Open the database connection
+            openCon()
+
+            ' Construct SQL UPDATE statement
+            Dim sql As String = "UPDATE patient_current_status SET treatment = @treatment WHERE name = @name"
+
+            ' Set up command
+            Using cmd As New MySqlCommand(sql, con)
+                ' Add parameters to the command
+                cmd.Parameters.AddWithValue("@treatment", treatment)
+                cmd.Parameters.AddWithValue("@name", name)
+
+                ' Execute the command
+                Dim rowsAffected As Integer = cmd.ExecuteNonQuery()
+
+                ' Check if the update was successful
+                If rowsAffected > 0 Then
+                    MessageBox.Show("Treatment updated for patient: " & name, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Else
+                    MessageBox.Show("No records updated for patient: " & name, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+                End If
+            End Using
+
+        Catch ex As Exception
+            ' Handle any errors
+            MessageBox.Show("Error updating data in database: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+
+        Finally
+            ' Close the database connection
+            closeCon()
+        End Try
+    End Sub
+
+
+
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs)
         Profile.Show()
         Hide()
 
@@ -16,11 +124,15 @@ Public Class PatientDashboard
 
 
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
-        If SharedData.SharedImage IsNot Nothing Then
-            Using ms As New MemoryStream(SharedData.SharedImage)
-                PictureBox1.Image = Image.FromStream(ms)
-            End Using
-        End If
+
+    End Sub
+
+
+    Public Sub loadTreatment(name As String)
+
+
+
+
     End Sub
 
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
@@ -29,7 +141,7 @@ Public Class PatientDashboard
 
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+    Private Sub Button5_Click(sender As Object, e As EventArgs)
         ' creation of profile
 
 
@@ -104,22 +216,32 @@ Public Class PatientDashboard
 
     End Sub
 
-    Private Sub PatientDashboard_Load(sender As Object, e As EventArgs) Handles Me.Load
-        ' Display the logged-in user's name
-        Label1.Text = PatientLogForm.LoggedInUserName
 
-        ' Display the logged-in user's image
-        If PatientLogForm.LoggedInUserImage IsNot Nothing Then
-            Dim imageData As Byte() = PatientLogForm.LoggedInUserImage
-            Using ms As New MemoryStream(imageData)
-                PictureBox1.Image = Image.FromStream(ms)
-            End Using
-        Else
-            PictureBox1.Image = Nothing
-        End If
-    End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        messaging.Show()
 
     End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        ' Assume you have a patient's name in a variable
+        Dim patientName As String = PatientLogForm.LoggedInUserName
+
+        ' Create a new instance of the Appointment form with the patient's name
+        Dim appointmentForm As New DentalManageMentSystem.Appointment(patientName)
+
+        ' Show the Appointment form
+        appointmentForm.Show()
+
+
+
+
+
+    End Sub
+
+    Private Sub dataGridA_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataGridA.CellContentClick
+
+    End Sub
+
+
 End Class
