@@ -3,7 +3,7 @@ Imports System.Net.Mail
 
 Public Class messaging
     Dim username As String = "retuermahero17@gmail.com"
-    Dim password As String = "pgpvvtgqdympvmzs"
+    Dim password As String = "shyhpilhmdtaiqfz"
 
     Private Sub sendVerificationCode()
         Dim user As String = usert.Text
